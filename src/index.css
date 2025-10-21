@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+a.active {
+  color: 'violate';
+}
