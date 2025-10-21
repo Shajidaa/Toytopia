@@ -37,13 +37,13 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Toy Topia</a>
+          <a className="text-xl">Toy Topia</a>
         </div>
         <div className="navbar-center hidden md:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <a className="btn">Login</a>
         </div>
       </div>
     </div>
