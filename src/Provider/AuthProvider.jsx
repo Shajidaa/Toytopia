@@ -2,6 +2,7 @@ import {
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
   onAuthStateChanged,
+  signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
   updateProfile,
@@ -25,7 +26,10 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return updateProfile(auth.currentUser, updateData);
   };
-
+  //login
+  const logIn = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
+  };
   //google
   const signInWithGoogle = () => {
     setLoading(true);
@@ -46,6 +50,7 @@ const AuthProvider = ({ children }) => {
     logOut,
     createUser,
     updateProfileFunc,
+    logIn,
   };
 
   useEffect(() => {

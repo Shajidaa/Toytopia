@@ -8,7 +8,9 @@ import { IoEyeOff } from "react-icons/io5";
 const Register = () => {
   const { signInWithGoogle, user, setUser, createUser, updateProfileFunc } =
     useContext(AuthContext);
+
   const [show, setShow] = useState(false);
+
   const navigate = useNavigate();
   const handleSignInWithGoogle = () => {
     signInWithGoogle()
@@ -94,6 +96,7 @@ const Register = () => {
                   required
                 />
                 <span
+                  type="button"
                   onClick={handleShowPassword}
                   className="absolute right-[25px] top-[34px] cursor-pointer z-50"
                 >

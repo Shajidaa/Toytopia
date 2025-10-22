@@ -1,22 +1,85 @@
-import { Link } from "react-router";
+import { useContext, useState } from "react";
+import { FaEye } from "react-icons/fa";
+import { IoEyeOff } from "react-icons/io5";
+import { Link, useLocation, useNavigate } from "react-router";
+import { AuthContext } from "../Provider/AuthContext";
+import { toast } from "react-toastify";
 
 const Login = () => {
+  const [show, setShow] = useState(null);
+
+  const { signInWithGoogle, setUser, logIn } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const handleSignInWithGoogle = () => {
+    signInWithGoogle()
+      .then((res) => setUser(res.user))
+      .catch((err) => console.log(err.message));
+  };
+
+  const handleShowPassword = (e) => {
+    e.preventDefault();
+
+    setShow(!show);
+  };
+  const handleLogIn = async (e) => {
+    e.preventDefault();
+    const from = e.target;
+
+    const email = from.email.value;
+    const password = from.password.value;
+    try {
+      const res = await logIn(email, password);
+      await setUser(res.user);
+      toast.success("Your login successfully!");
+      navigate(location.state ? location.state : "/");
+    } catch (err) {
+      toast.error(err.message);
+    }
+  };
+
   return (
     <div className="flex justify-center items-center  py-2  min-h-screen">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
         <div className="card-body">
-          <fieldset className="fieldset">
-            <label className="label">Email</label>
-            <input type="email" className="input" placeholder="Email" />
-            <label className="label">Password</label>
-            <input type="password" className="input" placeholder="Password" />
-            <div>
-              <a className="link link-hover">Forgot password?</a>
-            </div>
-            <button className="btn btn-neutral mt-4">Login</button>
-          </fieldset>
+          <form onSubmit={handleLogIn}>
+            <fieldset className="fieldset">
+              <label className="label">Email</label>
+              <input
+                type="email"
+                name="email"
+                className="input"
+                placeholder="Email"
+              />
+              {/* password */}
+              <div className="relative">
+                <label className="label">Password</label>
+                <input
+                  type={show ? "text" : "password"}
+                  name="password"
+                  className="input"
+                  placeholder=".."
+                  required
+                />
+                <span
+                  type="button"
+                  onClick={handleShowPassword}
+                  className="absolute right-[25px] top-[34px] cursor-pointer z-50"
+                >
+                  {show ? <FaEye></FaEye> : <IoEyeOff></IoEyeOff>}
+                </span>
+              </div>
+              <div>
+                <a className="link link-hover">Forgot password?</a>
+              </div>
+              <button className="btn btn-neutral mt-4">Login</button>
+            </fieldset>
+          </form>
           <div className="divider divider-secondary">or</div>
-          <button className="btn bg-white text-black border-[#e5e5e5]">
+          <button
+            onClick={handleSignInWithGoogle}
+            className="btn bg-white text-black border-[#e5e5e5]"
+          >
             <svg
               aria-label="Google logo"
               width="16"
