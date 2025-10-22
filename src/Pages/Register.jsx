@@ -1,11 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthContext";
 import { toast } from "react-toastify";
+import { FaEye } from "react-icons/fa";
+import { IoEyeOff } from "react-icons/io5";
 
 const Register = () => {
   const { signInWithGoogle, user, setUser, createUser, updateProfileFunc } =
     useContext(AuthContext);
+  const [show, setShow] = useState(false);
   const navigate = useNavigate();
   const handleSignInWithGoogle = () => {
     signInWithGoogle()
@@ -31,15 +34,19 @@ const Register = () => {
     try {
       const res = await createUser(email, password);
       const user = res.user;
-      updateProfileFunc({ displayName, photoUrl })
-        .then(() => {
-          setUser({ ...user, displayName, photoUrl });
-          navigate("/");
-        })
-        .catch((err) => console.log(err));
+      await updateProfileFunc({ displayName, photoUrl });
+
+      toast.success("Account create successfully");
+      setUser({ ...user, displayName, photoUrl });
+      navigate("/");
     } catch (err) {
       console.log(err.message);
     }
+  };
+  const handleShowPassword = (e) => {
+    e.preventDefault();
+
+    setShow(!show);
   };
   console.log(user);
 
@@ -77,14 +84,22 @@ const Register = () => {
                 required
               />
               {/* password */}
-              <label className="label">Password</label>
-              <input
-                type="password"
-                name="password"
-                className="input"
-                placeholder="Password"
-                required
-              />
+              <div className="relative">
+                <label className="label">Password</label>
+                <input
+                  type={show ? "text" : "password"}
+                  name="password"
+                  className="input"
+                  placeholder=".."
+                  required
+                />
+                <span
+                  onClick={handleShowPassword}
+                  className="absolute right-[25px] top-[34px] cursor-pointer z-50"
+                >
+                  {show ? <FaEye></FaEye> : <IoEyeOff></IoEyeOff>}
+                </span>
+              </div>
               {/* button  */}
               <button type="submit" className="btn btn-neutral mt-4">
                 Register
