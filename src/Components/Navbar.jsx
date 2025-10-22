@@ -1,7 +1,10 @@
 import { Link, NavLink } from "react-router";
 import MyContainer from "../MyContainer/MyContainer";
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthContext";
 
 const Navbar = () => {
+  const { user } = useContext(AuthContext);
   const links = (
     <>
       <NavLink to={"/"} className={"ml-2 font-medium text-lg"}>
@@ -48,9 +51,19 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <Link to={"login"} className="btn">
-            Login
-          </Link>
+          {user ? (
+            <div>
+              {" "}
+              <p>{user.email}</p>
+              <Link to={"login"} className="btn">
+                Log Out
+              </Link>
+            </div>
+          ) : (
+            <Link to={"login"} className="btn">
+              Login
+            </Link>
+          )}
         </div>
       </MyContainer>
     </div>

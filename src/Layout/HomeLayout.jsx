@@ -2,7 +2,6 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
 import { Outlet } from "react-router";
-import { ToastContainer } from "react-toastify";
 
 const HomeLayout = () => {
   return (
@@ -12,7 +11,6 @@ const HomeLayout = () => {
         <Outlet></Outlet>
       </main>
       <Footer></Footer>
-      <ToastContainer autoClose={500} />
     </>
   );
 };

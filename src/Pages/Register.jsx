@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router";
+import { AuthContext } from "../Provider/AuthContext";
 
 const Register = () => {
+  const { signInWithGoogle, setUser } = useContext(AuthContext);
+
+  const handleSignInWithGoogle = () => {
+    signInWithGoogle()
+      .then((res) => setUser(res.user))
+      .catch((err) => console.log(err.message));
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     const from = e.target;
@@ -40,7 +48,11 @@ const Register = () => {
             </Link>
           </p>
           <div className="divider divider-secondary">or</div>
-          <button className="btn bg-white text-black border-[#e5e5e5]">
+          <button
+            type="submit"
+            onClick={handleSignInWithGoogle}
+            className="btn bg-white text-black border-[#e5e5e5]"
+          >
             <svg
               aria-label="Google logo"
               width="16"
