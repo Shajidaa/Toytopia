@@ -5,8 +5,9 @@ import Home from "../Pages/Home";
 import Popular from "../Components/Popular/Popular";
 import ToysDetails from "../Pages/ToysDetails";
 import Toys from "../Pages/Toys";
-import Login from "../Auth/Login";
-import Register from "../Auth/Register";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
+import Error from "../Pages/Error";
 
 const router = createBrowserRouter([
   {
@@ -18,24 +19,24 @@ const router = createBrowserRouter([
         path: "/toys",
         element: <Toys></Toys>,
       },
-      {
-        path: "popularToys",
-        element: <Popular />,
-      },
 
       {
         path: "/toyDetails/:id",
         element: <ToysDetails></ToysDetails>,
       },
       {
-        path: "login",
+        path: "/login",
         element: <Login></Login>,
       },
       {
-        path: "register",
+        path: "/register",
         element: <Register></Register>,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <Error></Error>,
   },
 ]);
 
