@@ -1,24 +1,41 @@
 import React, { useContext } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthContext";
 
 const Register = () => {
-  const { signInWithGoogle, setUser } = useContext(AuthContext);
-
+  const { signInWithGoogle, user, setUser, createUser, updateProfileFunc } =
+    useContext(AuthContext);
+  const navigate = useNavigate();
   const handleSignInWithGoogle = () => {
     signInWithGoogle()
       .then((res) => setUser(res.user))
       .catch((err) => console.log(err.message));
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const from = e.target;
-    const name = from.name.value;
+    const displayName = from.name.value;
+    const photoUrl = from.photo.value;
     const email = from.email.value;
-    const photo = from.photo.value;
     const password = from.password.value;
-    console.log({ name, email, photo, password });
+    // createUser.then((res) => {
+    //   setUser(res.user);
+    // });
+    try {
+      const res = await createUser(email, password);
+      const user = res.user;
+      updateProfileFunc({ displayName, photoUrl })
+        .then(() => {
+          setUser({ ...user, displayName, photoUrl });
+          navigate("/");
+        })
+        .catch((err) => console.log(err));
+    } catch (err) {
+      console.log(err.message);
+    }
   };
+  console.log(user);
+
   return (
     <div className="flex justify-center items-center  py-2  min-h-screen">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
@@ -27,18 +44,44 @@ const Register = () => {
             <fieldset className="fieldset">
               {/* Name  */}
               <label className="label">Name</label>
-              <input type="name" className="input" placeholder="Name" />
+              <input
+                type="text"
+                name="name"
+                className="input"
+                placeholder="Name"
+                required
+              />
               {/* Photo  */}
               <label className="label">Photo URL</label>
-              <input type="photo" className="input" placeholder="Photo Url" />
+              <input
+                type="text"
+                name="photo"
+                className="input"
+                placeholder="Photo Url"
+                required
+              />
               {/* Email  */}
               <label className="label">Email</label>{" "}
-              <input type="email" className="input" placeholder="Email" />
+              <input
+                type="email"
+                name="email"
+                className="input"
+                placeholder="Email"
+                required
+              />
               {/* password */}
               <label className="label">Password</label>
-              <input type="password" className="input" placeholder="Password" />
+              <input
+                type="password"
+                name="password"
+                className="input"
+                placeholder="Password"
+                required
+              />
               {/* button  */}
-              <button className="btn btn-neutral mt-4">Register</button>
+              <button type="submit" className="btn btn-neutral mt-4">
+                Register
+              </button>
             </fieldset>
           </form>
           <p>
