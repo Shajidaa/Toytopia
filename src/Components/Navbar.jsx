@@ -4,7 +4,10 @@ import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthContext";
 
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut().then(() => {});
+  };
   const links = (
     <>
       <NavLink to={"/"} className={"ml-2 font-medium text-lg"}>
@@ -55,7 +58,7 @@ const Navbar = () => {
             <div>
               {" "}
               <p>{user.email}</p>
-              <Link to={"login"} className="btn">
+              <Link onClick={handleLogOut} to={"login"} className="btn">
                 Log Out
               </Link>
             </div>
