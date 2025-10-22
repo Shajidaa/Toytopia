@@ -81,33 +81,6 @@ const Banner = () => {
             />
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <img
-              className="max-h-[500px]  object-contain "
-              src="https://i.ibb.co.com/WpcMs0jq/8.png"
-              alt=""
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <img
-              className="max-h-[500px]  object-contain "
-              src="https://i.ibb.co.com/B5gcyFLs/9.png"
-              alt=""
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <img
-              className="max-h-[500px]  object-contain "
-              src="https://i.ibb.co.com/PGH9Xny6/10.png"
-              alt=""
-            />
-          </div>
-        </SwiperSlide>
       </Swiper>
     </>
   );

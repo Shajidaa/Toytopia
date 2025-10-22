@@ -8,7 +8,7 @@
     "rating": 4.7,
     "availableQuantity": 75,
     "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving.",
-    "pictureURL": "https://i.ibb.co.com/ynx4T8hK/images.jpg",
+    "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Building Blocks",
     "category": "Construction Toys",
     "isPopular": true
@@ -22,7 +22,7 @@
     "rating": 4.5,
     "availableQuantity": 60,
     "description": "Easy-to-handle building blocks for younger kids to boost their creativity.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2017/01/06/19/15/building-blocks-1951257_1280.jpg",
+    "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Building Blocks",
     "category": "Construction Toys",
     "isPopular": false
@@ -36,7 +36,7 @@
     "rating": 4.8,
     "availableQuantity": 40,
     "description": "Build an exciting roller coaster track with moving cars and loops.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2018/03/13/11/33/roller-coaster-3223160_1280.jpg",
+    "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Engineering Kits",
     "category": "Construction Toys",
     "isPopular": true
@@ -50,12 +50,11 @@
     "rating": 4.6,
     "availableQuantity": 55,
     "description": "Magnetic tiles for endless building possibilities in 2D and 3D.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2019/04/08/22/37/magnetic-tiles-4112714_1280.jpg",
+    "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Magnetic Blocks",
     "category": "Construction Toys",
     "isPopular": false
   },
-
   {
     "toyId": 5,
     "toyName": "Barbie Dreamhouse",
@@ -65,7 +64,7 @@
     "rating": 4.9,
     "availableQuantity": 30,
     "description": "A luxurious 3-story Barbie Dreamhouse with furniture and accessories.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2017/07/28/23/52/barbie-2543525_1280.jpg",
+    "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Doll Houses",
     "category": "Dolls & Accessories",
     "isPopular": true
@@ -79,7 +78,7 @@
     "rating": 4.4,
     "availableQuantity": 70,
     "description": "Interactive baby doll that can eat and drink just like a real baby.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2015/11/13/10/14/baby-doll-1042581_1280.jpg",
+    "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Baby Dolls",
     "category": "Dolls & Accessories",
     "isPopular": false
@@ -93,7 +92,7 @@
     "rating": 4.5,
     "availableQuantity": 80,
     "description": "A trendy Barbie with mix-and-match outfits for creative play.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2017/03/26/23/04/barbie-2175475_1280.jpg",
+    "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Fashion Dolls",
     "category": "Dolls & Accessories",
     "isPopular": true
@@ -107,12 +106,11 @@
     "rating": 4.2,
     "availableQuantity": 90,
     "description": "Unbox surprises and accessories with every LOL doll you collect!",
-    "pictureURL": "https://cdn.pixabay.com/photo/2020/12/18/13/00/lol-dolls-5841403_1280.jpg",
+    "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Collectible Dolls",
     "category": "Dolls & Accessories",
     "isPopular": false
   },
-
   {
     "toyId": 9,
     "toyName": "Hot Wheels Racing Set",
@@ -122,10 +120,10 @@
     "rating": 4.6,
     "availableQuantity": 120,
     "description": "High-speed race track with loops and jumps for Hot Wheels cars.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2017/08/25/21/12/hot-wheels-2684246_1280.jpg",
+    "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Race Cars",
     "category": "Vehicles",
-    "isPopular": true
+    "isPopular": false
   },
   {
     "toyId": 10,
@@ -136,7 +134,7 @@
     "rating": 4.3,
     "availableQuantity": 90,
     "description": "Giant monster trucks designed for thrilling crash and smash fun.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2017/09/07/10/51/monster-truck-2722262_1280.jpg",
+    "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Monster Trucks",
     "category": "Vehicles",
     "isPopular": false
@@ -150,7 +148,7 @@
     "rating": 4.8,
     "availableQuantity": 45,
     "description": "A stable and easy-to-fly RC helicopter with LED lights.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2017/04/12/15/33/helicopter-2226487_1280.jpg",
+    "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "RC Toys",
     "category": "Vehicles",
     "isPopular": true
@@ -164,12 +162,11 @@
     "rating": 4.1,
     "availableQuantity": 150,
     "description": "Mini die-cast cars in various models and colors for collection lovers.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2016/12/11/12/00/toy-car-1890784_1280.jpg",
+    "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Mini Cars",
     "category": "Vehicles",
     "isPopular": false
   },
-
   {
     "toyId": 13,
     "toyName": "Alphabet Learning Board",
@@ -179,7 +176,7 @@
     "rating": 4.4,
     "availableQuantity": 100,
     "description": "Interactive alphabet board with lights and sounds to teach letters.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2017/08/02/21/34/letters-2570426_1280.jpg",
+    "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Learning Boards",
     "category": "Educational Toys",
     "isPopular": false
@@ -193,7 +190,7 @@
     "rating": 4.6,
     "availableQuantity": 95,
     "description": "Colorful blocks designed to teach numbers, shapes, and counting.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2018/02/21/10/26/number-blocks-3161935_1280.jpg",
+    "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Puzzles",
     "category": "Educational Toys",
     "isPopular": false
@@ -207,7 +204,7 @@
     "rating": 4.9,
     "availableQuantity": 35,
     "description": "Hands-on experiments to explore chemistry and physics safely at home.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2016/03/09/09/31/chemistry-1245970_1280.jpg",
+    "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "STEM Kits",
     "category": "Educational Toys",
     "isPopular": true
@@ -221,12 +218,11 @@
     "rating": 4.7,
     "availableQuantity": 65,
     "description": "A detailed world map puzzle that helps kids learn geography in a fun way.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2015/03/26/09/41/puzzle-690114_1280.jpg",
+    "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Geography Toys",
     "category": "Educational Toys",
     "isPopular": false
   },
-
   {
     "toyId": 17,
     "toyName": "Kids Bubble Blaster",
@@ -236,7 +232,7 @@
     "rating": 4.3,
     "availableQuantity": 130,
     "description": "A fun outdoor bubble machine perfect for parties and backyard play.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2017/04/09/15/40/bubbles-2218713_1280.jpg",
+    "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Outdoor Play",
     "category": "Outdoor Fun",
     "isPopular": false
@@ -250,36 +246,8 @@
     "rating": 4.4,
     "availableQuantity": 85,
     "description": "Mini garden tools for kids to learn about planting and nature.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2017/04/26/22/46/gardening-2265379_1280.jpg",
+    "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Gardening",
-    "category": "Outdoor Fun",
-    "isPopular": false
-  },
-  {
-    "toyId": 19,
-    "toyName": "Kids Scooter",
-    "sellerName": "RideOn",
-    "sellerEmail": "support@rideon.com",
-    "price": 59.99,
-    "rating": 4.8,
-    "availableQuantity": 40,
-    "description": "Lightweight, foldable scooter designed for safe outdoor riding fun.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2016/11/29/08/55/scooter-1868413_1280.jpg",
-    "subCategory": "Ride-Ons",
-    "category": "Outdoor Fun",
-    "isPopular": true
-  },
-  {
-    "toyId": 20,
-    "toyName": "Beach Toy Bucket Set",
-    "sellerName": "SunnyPlay",
-    "sellerEmail": "sales@sunnyplay.com",
-    "price": 14.99,
-    "rating": 4.2,
-    "availableQuantity": 110,
-    "description": "Colorful buckets and molds for sandcastle building at the beach.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2017/06/01/19/03/beach-2369520_1280.jpg",
-    "subCategory": "Beach Toys",
     "category": "Outdoor Fun",
     "isPopular": false
   }

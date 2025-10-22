@@ -1,13 +1,18 @@
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import Banner from "../Components/Banner/Banner";
+
+import { Outlet } from "react-router";
+import { ToastContainer } from "react-toastify";
 
 const HomeLayout = () => {
   return (
     <>
       <Navbar></Navbar>
-      <Banner></Banner>
+      <main className="bg-[#F8F0FF]">
+        <Outlet></Outlet>
+      </main>
       <Footer></Footer>
+      <ToastContainer autoClose={500} />
     </>
   );
 };

@@ -4,13 +4,18 @@ import MyContainer from "../MyContainer/MyContainer";
 const Navbar = () => {
   const links = (
     <>
-      <NavLink className={"ml-2 font-medium text-lg"}>Home</NavLink>
+      <NavLink to={"/"} className={"ml-2 font-medium text-lg"}>
+        Home
+      </NavLink>
+      <NavLink to={"/toys"} className={"ml-2 font-medium text-lg"}>
+        Toys
+      </NavLink>
       <NavLink className={"ml-2 font-medium text-lg"}>Profile</NavLink>
     </>
   );
   return (
-    <div className="bg-base-100 shadow-sm">
-      <div className="navbar max-w-11/12 mx-auto ">
+    <div className={`bg-base-100! shadow-sm`}>
+      <MyContainer className="navbar ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
@@ -45,7 +50,7 @@ const Navbar = () => {
         <div className="navbar-end">
           <a className="btn">Login</a>
         </div>
-      </div>
+      </MyContainer>
     </div>
   );
 };
