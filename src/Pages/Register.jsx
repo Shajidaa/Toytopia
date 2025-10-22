@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthContext";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const { signInWithGoogle, user, setUser, createUser, updateProfileFunc } =
@@ -18,9 +19,15 @@ const Register = () => {
     const photoUrl = from.photo.value;
     const email = from.email.value;
     const password = from.password.value;
-    // createUser.then((res) => {
-    //   setUser(res.user);
-    // });
+
+    const regExp = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
+    if (!regExp.test(password)) {
+      toast.error(
+        "Password must include uppercase, lowercase, and be at least 6 characters."
+      );
+      return;
+    }
+
     try {
       const res = await createUser(email, password);
       const user = res.user;
