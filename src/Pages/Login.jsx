@@ -11,6 +11,7 @@ const Login = () => {
   const { signInWithGoogle, setUser, logIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
+
   const handleSignInWithGoogle = () => {
     signInWithGoogle()
       .then((res) => setUser(res.user))
@@ -22,6 +23,7 @@ const Login = () => {
 
     setShow(!show);
   };
+
   const handleLogIn = async (e) => {
     e.preventDefault();
     const from = e.target;
@@ -70,7 +72,9 @@ const Login = () => {
                 </span>
               </div>
               <div>
-                <a className="link link-hover">Forgot password?</a>
+                <Link to={"/forget"} className="link link-hover">
+                  Forgot password?
+                </Link>
               </div>
               <button className="btn btn-neutral mt-4">Login</button>
             </fieldset>

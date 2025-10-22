@@ -5,6 +5,8 @@ import { AuthContext } from "../Provider/AuthContext";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  console.log(user);
+
   const handleLogOut = () => {
     logOut();
   };
@@ -55,9 +57,11 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           {user ? (
-            <div>
+            <div className="flex justify-center items-center gap-2">
               {" "}
-              <p>{user.email}</p>
+              <div className="size-10 rounded-full">
+                <img className="rounded-full" src={user.photoURL} alt="" />
+              </div>
               <Link onClick={handleLogOut} to={"login"} className="btn">
                 Log Out
               </Link>

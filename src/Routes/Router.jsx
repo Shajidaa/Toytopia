@@ -8,6 +8,8 @@ import Toys from "../Pages/Toys";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import Error from "../Pages/Error";
+import Forget from "../Pages/Forget";
+import PrivateProvider from "../Provider/PrivateProvider";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +24,12 @@ const router = createBrowserRouter([
 
       {
         path: "/toyDetails/:id",
-        element: <ToysDetails></ToysDetails>,
+
+        element: (
+          <PrivateProvider>
+            <ToysDetails></ToysDetails>,
+          </PrivateProvider>
+        ),
       },
       {
         path: "/login",
@@ -31,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/forget",
+        element: <Forget></Forget>,
       },
     ],
   },
