@@ -10,10 +10,12 @@ const Toys = () => {
 
   return (
     <MyContainer className={"py-5 "}>
+      <title>Toy Topia | Toys section</title>
       <h1 className="text-center py-3 text-3xl font-bold">Our All Toys</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 ">
         {toys.map((toy) => (
           <div
+            key={toy.toyId}
             className=" bg-white
           rounded-2xl shadow-sm p-4
            flex flex-col gap-2

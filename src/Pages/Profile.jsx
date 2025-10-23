@@ -20,6 +20,7 @@ const Profile = () => {
   };
   return (
     <div className="flex justify-center items-center min-h-dvh">
+      <title>Toy Topia | Profile </title>
       <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
         <img
           src={user.photoURL}

@@ -1,6 +1,7 @@
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
+import "@smastrom/react-rating/style.css";
 import { Outlet } from "react-router";
 
 const HomeLayout = () => {

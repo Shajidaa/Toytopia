@@ -1,6 +1,7 @@
 const Forget = () => {
   return (
     <div className="flex justify-center items-center  py-2  min-h-screen">
+      <title>Toy Topia | Forget Password Page </title>
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
         <div className="card-body">
           <form>

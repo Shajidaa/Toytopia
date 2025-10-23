@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router";
 import useToys from "../Hooks/Hook";
 import { FaArrowLeft, FaCheckCircle, FaStar } from "react-icons/fa";
 import { toast } from "react-toastify";
+import Rating from "../Components/Rating";
 
 const ToysDetails = () => {
   const { id } = useParams();
@@ -36,6 +37,7 @@ const ToysDetails = () => {
 
   return (
     <div className="max-w-6xl mx-auto p-6">
+      <title>Toy Topia | Toy Details Page</title>
       <div className="card lg:card-side bg-base-100 shadow-xl border border-purple-200">
         <figure className="lg:w-1/2">
           <img
@@ -103,7 +105,7 @@ const ToysDetails = () => {
       >
         <FaArrowLeft /> Back to Toys
       </Link>
-      <div className="border-">
+      <div className="">
         <form onSubmit={handleSubmit}>
           <legend>
             <input
@@ -129,6 +131,10 @@ const ToysDetails = () => {
             Try now{" "}
           </button>
         </form>
+      </div>
+      <div>
+        <h1>Ratings &#8594;</h1>
+        <Rating></Rating>
       </div>
     </div>
   );
