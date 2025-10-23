@@ -49,7 +49,3 @@
 .navLink:hover {
   @apply text-[#dc7977] border-b-3
 }
-
-.fixedHight {
-  height: calc(100vh -369px);
-}

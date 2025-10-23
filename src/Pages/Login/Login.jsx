@@ -2,9 +2,9 @@ import { useContext, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { IoEyeOff } from "react-icons/io5";
 import { Link, useLocation, useNavigate } from "react-router";
-import { AuthContext } from "../Provider/AuthContext";
+import { AuthContext } from "../../Provider/AuthContext";
 import { toast } from "react-toastify";
-
+import "./Login.css";
 const Login = () => {
   const [show, setShow] = useState(null);
 

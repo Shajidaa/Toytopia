@@ -5,7 +5,7 @@ import Home from "../Pages/Home";
 import Popular from "../Components/Popular/Popular";
 import ToysDetails from "../Pages/ToysDetails";
 import Toys from "../Pages/Toys";
-import Login from "../Pages/Login";
+import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register";
 import Error from "../Pages/Error";
 import Forget from "../Pages/Forget";
