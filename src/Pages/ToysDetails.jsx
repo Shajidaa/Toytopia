@@ -34,21 +34,28 @@ const ToysDetails = () => {
     subCategory,
     category,
     isPopular,
+    brandName,
   } = singleToys;
 
   return (
-    <div className="max-w-6xl mx-auto p-6">
-      <title>Toy Topia | Toy Details Page</title>
-      <div className="card lg:card-side bg-base-100 shadow-xl border border-purple-200">
-        <figure className="lg:w-1/2">
+    <div className="max-w-7xl mx-auto p-6">
+      <title>Toy Details Page</title>
+      <div className="card p-2 bg-base-100 shadow-xl ">
+        <Link
+          to="/"
+          className=" underline mb-4 flex items-center gap-2 border-primary text-primary hover:text-accent "
+        >
+          <FaArrowLeft /> Back to Toys
+        </Link>
+        <figure className="">
           <img
             src={pictureURL}
             alt={toyName}
-            className="h-full w-full object-cover rounded-l-xl"
+            className="h-full w-full object-cover rounded-xl"
           />
         </figure>
 
-        <div className="card-body lg:w-1/2">
+        <div className="card-body ">
           <h2 className="card-title text-3xl font-bold text-primary">
             {toyName}
             {isPopular && (
@@ -72,6 +79,10 @@ const ToysDetails = () => {
               {sellerEmail}
             </p>
             <p>
+              <span className="font-semibold text-primary"> Brand : </span>{" "}
+              {brandName}
+            </p>
+            <p>
               <span className="font-semibold text-primary">Category:</span>{" "}
               {category} / {subCategory}
             </p>
@@ -85,57 +96,60 @@ const ToysDetails = () => {
 
           <div className="flex items-center gap-4 mt-3">
             <span className="text-2xl font-bold text-primary">
-              ${price.toFixed(2)}
+              Price: ${price}
             </span>
-            <div className="flex items-center text-yellow-500">
-              <FaStar /> <span className="ml-1 text-gray-700">{rating}</span>
-            </div>
-          </div>
 
-          <div className="card-actions justify-end mt-6">
-            <button className="btn bg-primary text-white hover:bg-purple-700 gap-2">
-              <FaCheckCircle />
-              Buy Now
-            </button>
+            <div className="flex items-center ">
+              Rating: <FaStar className=" text-yellow-500" />{" "}
+              <span className="ml-1 text-gray-700">{rating}</span>
+            </div>
           </div>
         </div>
       </div>
-      <Link
-        to="/"
-        className=" underline mb-4 flex items-center gap-2 border-primary text-primary  hover:text-white"
-      >
-        <FaArrowLeft /> Back to Toys
-      </Link>
-      <div className="">
-        <form onSubmit={handleSubmit}>
-          <legend>
-            <input
-              type="text"
-              name="name"
-              placeholder="Your name"
-              className="input input-ghost border border-gray-400"
-              required
-            />
-          </legend>
-          <br />
-          <legend>
-            {" "}
-            <input
-              type="text"
-              name="email"
-              placeholder="Your Email"
-              className="input input-ghost border border-gray-400"
-              required
-            />
-          </legend>
-          <button type="submit" className="btn">
-            Try now{" "}
-          </button>
-        </form>
-      </div>
-      <div>
-        <h1>Ratings &#8594;</h1>
-        <Rating></Rating>
+      <div className="flex flex-col lg:flex-row justify-around">
+        <div className=" mt-10 lg:max-w-96 bg-white  p-4 rounded-2xl shadow-2xl ">
+          <div className="">
+            <form onSubmit={handleSubmit}>
+              <legend>
+                <label className="text-lg font-semibold">Your Name:</label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  className="input input-ghost border w-full border-gray-400"
+                  required
+                />
+              </legend>
+              <br />
+              <legend>
+                <label className="text-lg font-semibold">Your Email:</label>{" "}
+                <input
+                  type="text"
+                  name="email"
+                  placeholder="Your Email"
+                  className="input input-ghost border w-full border-gray-400"
+                  required
+                />
+              </legend>
+              <br />
+              <button
+                type="submit"
+                className="btn bg-blue-700 text-white  hover:bg-accent w-full "
+              >
+                Try now{" "}
+              </button>
+            </form>
+          </div>
+        </div>
+        <div
+          className="flex flex-col justify-center 
+        items-center bg-white mt-10 p-4 rounded-2xl shadow-2xl"
+        >
+          <h1 className=" py-3 text-3xl font-bold text-center text-blue-800">
+            leave feedback &#8594;
+          </h1>
+          <Rating></Rating>
+        </div>
       </div>
     </div>
   );

@@ -68,8 +68,15 @@ const Navbar = () => {
           {user ? (
             <div className="flex justify-center items-center gap-2">
               {" "}
-              <div className="size-10 rounded-full">
-                <img className="rounded-full" src={user.photoURL} alt="" />
+              <div
+                data-tip={user.displayName}
+                className="size-12 tooltip tooltip-error tooltip-bottom border-2 border-[#dc7977] rounded-full "
+              >
+                <img
+                  className="w-full bg-cover h-full rounded-full  "
+                  src={user.photoURL}
+                  alt="User Profile"
+                />
               </div>
               <Link onClick={handleLogOut} to={"login"} className="btn">
                 Log Out

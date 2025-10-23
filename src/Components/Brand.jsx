@@ -3,7 +3,9 @@ import Marquee from "react-fast-marquee";
 const Brand = () => {
   const { toys } = useToys();
   const brand = toys.map((toy) => (
-    <h1 className="text-xl font-bold text-[#333333]">{toy.brandName}</h1>
+    <h1 key={toy.toyId} className="text-xl font-bold text-[#333333]">
+      {toy.brandName}
+    </h1>
   ));
   return (
     <div>

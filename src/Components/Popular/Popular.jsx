@@ -52,7 +52,7 @@ const Popular = () => {
 
             <Link
               to={`/toyDetails/${toy.toyId}`}
-              className="mt-2 btn font-bold rounded-2xl bg-[#8878f4] hover:bg-amber-800 text-white 
+              className="mt-2 btn font-bold rounded-2xl bg-blue-700   hover:bg-accent text-white 
              "
             >
               View More

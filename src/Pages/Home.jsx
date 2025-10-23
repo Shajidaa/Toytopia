@@ -1,5 +1,6 @@
 import Banner from "../Components/Banner/Banner";
 import Brand from "../Components/Brand";
+import Choose from "../Components/Choose";
 import Popular from "../Components/Popular/Popular";
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
       <Banner></Banner>
       <Popular></Popular>
       <Brand></Brand>
+      <Choose></Choose>
     </div>
   );
 };

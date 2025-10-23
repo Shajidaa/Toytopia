@@ -22,13 +22,10 @@ function App() {
   const [rating, setRating] = useState(0);
 
   return (
-    <div
-      className=" bg-white mt-2 p-4 rounded-2xl shadow-2xl"
-      style={{ maxWidth: 280, width: "100%" }}
-    >
+    <div style={{ maxWidth: 280, width: "100%" }}>
       <Rating value={rating} onChange={setRating} />
       <div>
-        <div>{`Selected: ${getRating(rating)}`}</div>
+        <div>{` ${getRating(rating)}`}</div>
       </div>
     </div>
   );
