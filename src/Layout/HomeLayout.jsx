@@ -8,7 +8,7 @@ const HomeLayout = () => {
   return (
     <>
       <Navbar></Navbar>
-      <main className="bg-[#F8F0FF]">
+      <main className="bg-[#fff8f7]">
         <Outlet></Outlet>
       </main>
       <Footer></Footer>

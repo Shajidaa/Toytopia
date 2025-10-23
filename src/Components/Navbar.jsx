@@ -5,26 +5,25 @@ import { AuthContext } from "../Provider/AuthContext";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  console.log(user);
 
   const handleLogOut = () => {
     logOut();
   };
   const links = (
     <>
-      <NavLink to={"/"} className={"ml-2 font-medium text-lg"}>
-        Home
+      <NavLink to={"/"} className={"navLink"}>
+        HOME
       </NavLink>
-      <NavLink to={"/toys"} className={"ml-2 font-medium text-lg"}>
-        Toys
+      <NavLink to={"/toys"} className={"navLink"}>
+        TOYS
       </NavLink>
-      <NavLink to={"/profile"} className={"ml-2 font-medium text-lg"}>
-        Profile
+      <NavLink to={"/profile"} className={"navLink"}>
+        PROFILE
       </NavLink>
     </>
   );
   return (
-    <div className={`bg-base-100! shadow-sm`}>
+    <div className={`bg-[#fff8f7]! shadow-sm sticky top-0 z-50`}>
       <MyContainer className="navbar ">
         <div className="navbar-start">
           <div className="dropdown">
@@ -47,12 +46,20 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm  dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               {links}
             </ul>
           </div>
-          <a className="text-xl">Toy Topia</a>
+          <div className="h-20 ">
+            <img
+              className="w-full h-full object-contain"
+              src={
+                "https://i.ibb.co.com/7JphcGsC/download-removebg-preview.png"
+              }
+              alt=""
+            />
+          </div>
         </div>
         <div className="navbar-center hidden md:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>

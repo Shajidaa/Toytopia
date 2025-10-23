@@ -5,3 +5,41 @@
   font-family: "Poppins", sans-serif;
 
 }
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #363636;
+  --color-secondary: #ff8ea6;
+  --color-accent-1: #f6b6b4;
+  --color-accent: #e57368;
+  --color-accent-3: #a3d8f4;
+
+
+  --color-section: #fff1ef;
+
+  --color-text: #333333;
+  --color-textSecondary: #333333;
+  --color-textLight: #333333;
+
+  --color-btn: #dc7977;
+  --color-hoverBtn: #c76765;
+
+
+}
+
+.gradient {
+  background-image: linear-gradient(to left bottom, #b88bec, #cf88e0, #e186d3, #ef86c5, #f888b7, #f888b7, #f888b7, #f888b7, #ef86c5, #e186d3, #cf88e0, #b88bec);
+}
+
+.navLink {
+  @apply ml-5 font-semibold text-lg text-primary
+}
+
+.navLink.active {
+  @apply text-[#dc7977] border-b-3
+}
+
+.navLink:hover {
+  @apply text-[#dc7977] border-b-3
+}

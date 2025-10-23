@@ -4,7 +4,7 @@ import Popular from "../Components/Popular/Popular";
 const Home = () => {
   return (
     <div>
-      <title>Toy Topia | Home</title>
+      <title>Where Every Toy Tells a Story! KidzHaven</title>
       <Banner></Banner>
       <Popular></Popular>
     </div>

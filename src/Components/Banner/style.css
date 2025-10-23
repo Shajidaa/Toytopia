@@ -1,0 +1,11 @@
+.mySwiper.swiper-button-next {
+    color: #dc7977;
+}
+
+.mySwiper .swiper-pagination-bullet {
+    background: #dc7977;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+    background: #dc7977;
+}
