@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { AuthContext } from "../Provider/AuthContext";
+import { AuthContext } from "../../Provider/AuthContext";
 import { toast } from "react-toastify";
-
+import "./P.css";
 const Profile = () => {
   const { user, setUser, updateProfileFunc, loading, setLoading } =
     useContext(AuthContext);
@@ -39,7 +39,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="flex justify-center items-center ">
+    <div className="flex justify-center items-center fixedHight">
       <title> Profile </title>
       <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
         <img

@@ -9,7 +9,7 @@ import Login from "../Pages/Login/Login";
 import Error from "../Pages/Error";
 import Forget from "../Pages/Forget";
 import PrivateProvider from "../Provider/PrivateProvider";
-import Profile from "../Pages/Profile";
+import Profile from "../Pages/Profile/Profile";
 import Register from "../Pages/Register/Register";
 
 const router = createBrowserRouter([
