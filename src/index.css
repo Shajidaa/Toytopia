@@ -19,7 +19,7 @@
   --color-section: #fff1ef;
 
   --color-text: #333333;
-  --color-textSecondary: #333333;
+  --color-textSecondary: #ffd6a5;
   --color-textLight: #333333;
 
   --color-btn: #dc7977;
@@ -29,8 +29,14 @@
 }
 
 .gradient {
-  background-image: linear-gradient(to left bottom, #b88bec, #cf88e0, #e186d3, #ef86c5, #f888b7, #f888b7, #f888b7, #f888b7, #ef86c5, #e186d3, #cf88e0, #b88bec);
+  background-image: linear-gradient(to right, #c76765, #d07a78, #d88e8c, #e0a19f, #e7b4b3);
 }
+
+.gradientBtn {
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+
+
 
 .navLink {
   @apply ml-5 font-semibold text-lg text-primary

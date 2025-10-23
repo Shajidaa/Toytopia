@@ -30,16 +30,18 @@ const Toys = () => {
               />
             </div>
             <h2 className="text-lg font-semibold ">{toy.toyName}</h2>
-            <p className="font-bold text-blue-600">${toy.price}</p>
+            <p className="font-semibold text-[#555555] ">Price:${toy.price}</p>
             <div className="flex justify-between">
-              <p>⭐ {toy.rating}</p>
-              <p>Available: {toy.availableQuantity}</p>
+              <p className="text-gray-600 font-medium">
+                Available: {toy.availableQuantity}
+              </p>
+              <p className="text-gray-600 font-medium">⭐ {toy.rating}</p>
             </div>
 
             <Link
               to={`/toyDetails/${toy.toyId}`}
-              className="mt-2 px-4 py-1 bg-[rgb(182,26,255)] text-white rounded-lg
-             hover:bg-[rgb(175,66,226)]"
+              className="mt-2 btn font-bold rounded-2xl bg-[#8878f4] hover:bg-amber-800 text-white 
+             "
             >
               View More
             </Link>

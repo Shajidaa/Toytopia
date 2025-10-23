@@ -3,6 +3,7 @@ import useToys from "../Hooks/Hook";
 import { FaArrowLeft, FaCheckCircle, FaStar } from "react-icons/fa";
 import { toast } from "react-toastify";
 import Rating from "../Components/Rating";
+import Spinner from "../Components/Spinner/Spinner";
 
 const ToysDetails = () => {
   const { id } = useParams();
@@ -10,7 +11,7 @@ const ToysDetails = () => {
   const singleToys = toys.find((toy) => toy.toyId == id);
 
   if (loading) {
-    return <p>loading''''''''''''</p>;
+    return <Spinner></Spinner>;
   }
   const handleSubmit = (e) => {
     e.preventDefault();

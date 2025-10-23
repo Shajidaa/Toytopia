@@ -10,15 +10,14 @@ const Banner = () => {
   return (
     <>
       <Swiper
-        centeredSlides={true}
         spaceBetween={30}
-        loop={true}
-        pagination={{
-          clickable: true,
-        }}
+        centeredSlides={true}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}

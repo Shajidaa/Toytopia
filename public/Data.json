@@ -7,11 +7,13 @@
     "price": 49.99,
     "rating": 4.7,
     "availableQuantity": 75,
-    "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving.",
+    "description": "A timeless set of colorful Lego bricks. Encourages creativity and problem-solving. Perfect for building endless structures.",
     "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Building Blocks",
     "category": "Construction Toys",
-    "isPopular": true
+    "isPopular": true,
+    "isBrand": true,
+    "brandName": "LEGO"
   },
   {
     "toyId": 2,
@@ -21,11 +23,13 @@
     "price": 35.5,
     "rating": 4.5,
     "availableQuantity": 60,
-    "description": "Easy-to-handle building blocks for younger kids to boost their creativity.",
+    "description": "Easy-to-handle building blocks for younger kids. Boosts creativity and motor skills. Great starter set for toddlers.",
     "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Building Blocks",
     "category": "Construction Toys",
-    "isPopular": false
+    "isPopular": false,
+    "isBrand": true,
+    "brandName": "Mega Bloks"
   },
   {
     "toyId": 3,
@@ -35,11 +39,13 @@
     "price": 59.99,
     "rating": 4.8,
     "availableQuantity": 40,
-    "description": "Build an exciting roller coaster track with moving cars and loops.",
+    "description": "Build a thrilling roller coaster with moving cars and loops. Encourages engineering skills and creativity. Fun for kids and teens.",
     "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Engineering Kits",
     "category": "Construction Toys",
-    "isPopular": true
+    "isPopular": true,
+    "isBrand": true,
+    "brandName": "K’NEX"
   },
   {
     "toyId": 4,
@@ -49,11 +55,13 @@
     "price": 42.0,
     "rating": 4.6,
     "availableQuantity": 55,
-    "description": "Magnetic tiles for endless building possibilities in 2D and 3D.",
+    "description": "Magnetic tiles for building in 2D and 3D. Sparks creativity and imagination. Ideal for collaborative play.",
     "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Magnetic Blocks",
     "category": "Construction Toys",
-    "isPopular": false
+    "isPopular": false,
+    "isBrand": true,
+    "brandName": "Magna-Tiles"
   },
   {
     "toyId": 5,
@@ -63,11 +71,13 @@
     "price": 89.99,
     "rating": 4.9,
     "availableQuantity": 30,
-    "description": "A luxurious 3-story Barbie Dreamhouse with furniture and accessories.",
+    "description": "A 3-story Barbie Dreamhouse with furniture and accessories. Encourages imaginative play. Perfect for hours of fun.",
     "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Doll Houses",
     "category": "Dolls & Accessories",
-    "isPopular": true
+    "isPopular": true,
+    "isBrand": true,
+    "brandName": "Barbie"
   },
   {
     "toyId": 6,
@@ -77,11 +87,13 @@
     "price": 39.99,
     "rating": 4.4,
     "availableQuantity": 70,
-    "description": "Interactive baby doll that can eat and drink just like a real baby.",
+    "description": "Interactive baby doll that can eat and drink like a real baby. Encourages nurturing and role-play. Fun for young children.",
     "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Baby Dolls",
     "category": "Dolls & Accessories",
-    "isPopular": false
+    "isPopular": false,
+    "isBrand": true,
+    "brandName": "Baby Alive"
   },
   {
     "toyId": 7,
@@ -91,11 +103,13 @@
     "price": 29.99,
     "rating": 4.5,
     "availableQuantity": 80,
-    "description": "A trendy Barbie with mix-and-match outfits for creative play.",
+    "description": "A trendy Barbie with mix-and-match outfits for creative play. Great for imaginative storytelling. Perfect for collectors and kids.",
     "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Fashion Dolls",
     "category": "Dolls & Accessories",
-    "isPopular": true
+    "isPopular": true,
+    "isBrand": true,
+    "brandName": "Barbie"
   },
   {
     "toyId": 8,
@@ -105,11 +119,13 @@
     "price": 24.99,
     "rating": 4.2,
     "availableQuantity": 90,
-    "description": "Unbox surprises and accessories with every LOL doll you collect!",
+    "description": "Unbox surprises and accessories with every LOL doll. Fun for collection and play. Great for kids of all ages.",
     "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Collectible Dolls",
     "category": "Dolls & Accessories",
-    "isPopular": false
+    "isPopular": false,
+    "isBrand": true,
+    "brandName": "LOL Surprise"
   },
   {
     "toyId": 9,
@@ -119,11 +135,13 @@
     "price": 27.99,
     "rating": 4.6,
     "availableQuantity": 120,
-    "description": "High-speed race track with loops and jumps for Hot Wheels cars.",
+    "description": "High-speed race track with loops and jumps for Hot Wheels cars. Encourages racing fun and collection play. Great for all ages.",
     "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Race Cars",
     "category": "Vehicles",
-    "isPopular": false
+    "isPopular": false,
+    "isBrand": true,
+    "brandName": "Hot Wheels"
   },
   {
     "toyId": 10,
@@ -133,11 +151,13 @@
     "price": 32.49,
     "rating": 4.3,
     "availableQuantity": 90,
-    "description": "Giant monster trucks designed for thrilling crash and smash fun.",
+    "description": "Giant monster trucks designed for thrilling crash and smash fun. Perfect for outdoor play. Great for kids who love vehicles.",
     "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Monster Trucks",
     "category": "Vehicles",
-    "isPopular": false
+    "isPopular": false,
+    "isBrand": false,
+    "brandName": "ToyArena"
   },
   {
     "toyId": 11,
@@ -147,11 +167,13 @@
     "price": 54.99,
     "rating": 4.8,
     "availableQuantity": 45,
-    "description": "A stable and easy-to-fly RC helicopter with LED lights.",
+    "description": "A stable and easy-to-fly RC helicopter with LED lights. Perfect for outdoor fun. Encourages learning control skills.",
     "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "RC Toys",
     "category": "Vehicles",
-    "isPopular": true
+    "isPopular": true,
+    "isBrand": false,
+    "brandName": "FlyHigh"
   },
   {
     "toyId": 12,
@@ -161,11 +183,13 @@
     "price": 19.99,
     "rating": 4.1,
     "availableQuantity": 150,
-    "description": "Mini die-cast cars in various models and colors for collection lovers.",
+    "description": "Mini die-cast cars in various models and colors for collection lovers. Fun for display and play. Encourages car collecting habits.",
     "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Mini Cars",
     "category": "Vehicles",
-    "isPopular": false
+    "isPopular": false,
+    "isBrand": false,
+    "brandName": "AutoKids"
   },
   {
     "toyId": 13,
@@ -175,11 +199,13 @@
     "price": 22.99,
     "rating": 4.4,
     "availableQuantity": 100,
-    "description": "Interactive alphabet board with lights and sounds to teach letters.",
+    "description": "Interactive alphabet board with lights and sounds. Helps children learn letters and basic phonics. Great for early learning.",
     "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Learning Boards",
     "category": "Educational Toys",
-    "isPopular": false
+    "isPopular": false,
+    "isBrand": false,
+    "brandName": "EduToys"
   },
   {
     "toyId": 14,
@@ -189,11 +215,13 @@
     "price": 18.5,
     "rating": 4.6,
     "availableQuantity": 95,
-    "description": "Colorful blocks designed to teach numbers, shapes, and counting.",
+    "description": "Colorful blocks designed to teach numbers, shapes, and counting. Encourages problem-solving skills. Fun for early learners.",
     "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Puzzles",
     "category": "Educational Toys",
-    "isPopular": false
+    "isPopular": false,
+    "isBrand": false,
+    "brandName": "BrainyKids"
   },
   {
     "toyId": 15,
@@ -203,11 +231,13 @@
     "price": 45.0,
     "rating": 4.9,
     "availableQuantity": 35,
-    "description": "Hands-on experiments to explore chemistry and physics safely at home.",
+    "description": "Hands-on experiments to explore chemistry and physics safely. Encourages STEM learning and curiosity. Great for science enthusiasts.",
     "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "STEM Kits",
     "category": "Educational Toys",
-    "isPopular": true
+    "isPopular": true,
+    "isBrand": true,
+    "brandName": "SmartPlay"
   },
   {
     "toyId": 16,
@@ -217,11 +247,13 @@
     "price": 26.99,
     "rating": 4.7,
     "availableQuantity": 65,
-    "description": "A detailed world map puzzle that helps kids learn geography in a fun way.",
+    "description": "A detailed world map puzzle. Helps kids learn geography in a fun way. Encourages problem-solving and curiosity.",
     "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Geography Toys",
     "category": "Educational Toys",
-    "isPopular": false
+    "isPopular": false,
+    "isBrand": false,
+    "brandName": "GeoKids"
   },
   {
     "toyId": 17,
@@ -231,11 +263,13 @@
     "price": 15.99,
     "rating": 4.3,
     "availableQuantity": 130,
-    "description": "A fun outdoor bubble machine perfect for parties and backyard play.",
+    "description": "A fun outdoor bubble machine. Perfect for parties and backyard play. Encourages outdoor activity and social fun.",
     "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Outdoor Play",
     "category": "Outdoor Fun",
-    "isPopular": false
+    "isPopular": false,
+    "isBrand": false,
+    "brandName": "PlayZone"
   },
   {
     "toyId": 18,
@@ -245,10 +279,12 @@
     "price": 25.49,
     "rating": 4.4,
     "availableQuantity": 85,
-    "description": "Mini garden tools for kids to learn about planting and nature.",
+    "description": "Mini garden tools for kids. Helps children learn about planting and nature. Perfect for outdoor fun and education.",
     "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
     "subCategory": "Gardening",
     "category": "Outdoor Fun",
-    "isPopular": false
+    "isPopular": false,
+    "isBrand": false,
+    "brandName": "NatureToys"
   }
 ]
