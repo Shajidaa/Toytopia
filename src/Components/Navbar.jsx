@@ -18,7 +18,9 @@ const Navbar = () => {
       <NavLink to={"/toys"} className={"ml-2 font-medium text-lg"}>
         Toys
       </NavLink>
-      <NavLink className={"ml-2 font-medium text-lg"}>Profile</NavLink>
+      <NavLink to={"/profile"} className={"ml-2 font-medium text-lg"}>
+        Profile
+      </NavLink>
     </>
   );
   return (

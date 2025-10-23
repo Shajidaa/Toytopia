@@ -10,6 +10,7 @@ import Register from "../Pages/Register";
 import Error from "../Pages/Error";
 import Forget from "../Pages/Forget";
 import PrivateProvider from "../Provider/PrivateProvider";
+import Profile from "../Pages/Profile";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,15 @@ const router = createBrowserRouter([
       {
         path: "/forget",
         element: <Forget></Forget>,
+      },
+      {
+        path: "/profile",
+
+        element: (
+          <PrivateProvider>
+            <Profile></Profile>
+          </PrivateProvider>
+        ),
       },
     ],
   },
