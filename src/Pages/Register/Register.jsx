@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router";
-import { AuthContext } from "../Provider/AuthContext";
+import { AuthContext } from "../../Provider/AuthContext";
 import { toast } from "react-toastify";
 import { FaEye } from "react-icons/fa";
 import { IoEyeOff } from "react-icons/io5";
-
+import "./Register.css";
 const Register = () => {
   const { signInWithGoogle, user, setUser, createUser, updateProfileFunc } =
     useContext(AuthContext);
@@ -53,8 +53,8 @@ const Register = () => {
   console.log(user);
 
   return (
-    <div className="flex justify-center items-center  py-2  min-h-screen">
-      <title>Toy Topia | Register page</title>
+    <div className="flex justify-center items-center  py-2 fixedHight ">
+      <title> Register page</title>
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
         <div className="card-body">
           <form onSubmit={handleSubmit}>
