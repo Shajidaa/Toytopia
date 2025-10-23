@@ -3,19 +3,25 @@ import { AuthContext } from "../Provider/AuthContext";
 import { toast } from "react-toastify";
 
 const Profile = () => {
-  const { user, setUser, updateProfileFunc } = useContext(AuthContext);
+  const { user, setUser, updateProfileFunc, setLoading } =
+    useContext(AuthContext);
+
   const handleUpdate = async (e) => {
     e.preventDefault();
     const from = e.target;
     const displayName = from.name.value;
-    const photoUrl = from.photo.value;
+    const photoURL = from.photo.value;
+    setLoading(true);
+
     try {
-      await updateProfileFunc({ displayName, photoUrl });
+      await updateProfileFunc({ ...user, displayName, photoURL });
 
       toast.success("Update successfully");
-      setUser({ ...user, displayName, photoUrl });
+      setUser({ ...user, displayName, photoURL });
     } catch (err) {
       console.log(err.message);
+    } finally {
+      setLoading(false);
     }
   };
   return (

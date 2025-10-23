@@ -21,7 +21,7 @@ const Register = () => {
     e.preventDefault();
     const from = e.target;
     const displayName = from.name.value;
-    const photoUrl = from.photo.value;
+    const photoURL = from.photo.value;
     const email = from.email.value;
     const password = from.password.value;
 
@@ -36,10 +36,10 @@ const Register = () => {
     try {
       const res = await createUser(email, password);
       const user = res.user;
-      await updateProfileFunc({ displayName, photoUrl });
+      await updateProfileFunc({ displayName, photoURL });
 
       toast.success("Account create successfully");
-      setUser({ ...user, displayName, photoUrl });
+      setUser({ ...user, displayName, photoURL });
       navigate("/");
     } catch (err) {
       console.log(err.message);

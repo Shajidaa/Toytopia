@@ -24,9 +24,13 @@ const AuthProvider = ({ children }) => {
   };
 
   const updateProfileFunc = (updateData) => {
-    setLoading(true);
+    // setLoading(true);
     return updateProfile(auth.currentUser, updateData);
   };
+  // const updateEditProfileFunc = (updateData) => {
+  //   setLoading(true);
+  //   return updateProfile(auth.currentUser, updateData);
+  // };
   //login
   const logIn = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
@@ -62,6 +66,7 @@ const AuthProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    setLoading(true);
     const unsubscribe = onAuthStateChanged(auth, (currUser) => {
       setUser(currUser);
       setLoading(false);

@@ -19,7 +19,7 @@ function getRating(rating) {
 }
 
 function App() {
-  const [rating, setRating] = useState(3);
+  const [rating, setRating] = useState(0);
 
   return (
     <div

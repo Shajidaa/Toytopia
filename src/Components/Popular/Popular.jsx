@@ -7,7 +7,7 @@ const Popular = () => {
 
   const popularToys = toys.filter((category) => category.isPopular === true);
   if (loading) {
-    return <p>loading</p>;
+    return <p>loading🎀</p>;
   }
   return (
     <MyContainer className={"py-5 "}>
