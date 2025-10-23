@@ -3,7 +3,7 @@ import { AuthContext } from "../Provider/AuthContext";
 import { toast } from "react-toastify";
 
 const Profile = () => {
-  const { user, setUser, updateProfileFunc, setLoading } =
+  const { user, setUser, updateProfileFunc, loading, setLoading } =
     useContext(AuthContext);
 
   const handleUpdate = async (e) => {
@@ -12,18 +12,32 @@ const Profile = () => {
     const displayName = from.name.value;
     const photoURL = from.photo.value;
     setLoading(true);
-
     try {
-      await updateProfileFunc({ ...user, displayName, photoURL });
+      if (displayName && !photoURL) {
+        await updateProfileFunc({ ...user, displayName });
 
-      toast.success("Update successfully");
-      setUser({ ...user, displayName, photoURL });
+        toast.success("Update successfully");
+        setUser({ ...user, displayName });
+      } else if (!displayName && photoURL) {
+        await updateProfileFunc({ ...user, photoURL });
+
+        toast.success("Update successfully");
+        setUser({ ...user, photoURL });
+      } else if (displayName && photoURL) {
+        await updateProfileFunc({ ...user, displayName, photoURL });
+
+        toast.success("Update successfully");
+        setUser({ ...user, displayName, photoURL });
+      }
+      from.reset();
     } catch (err) {
       console.log(err.message);
+      toast.error("Failed to update Profile .Please Try again");
     } finally {
       setLoading(false);
     }
   };
+
   return (
     <div className="flex justify-center items-center min-h-dvh">
       <title>Toy Topia | Profile </title>
@@ -51,11 +65,16 @@ const Profile = () => {
             className="input"
             placeholder="Photo Url"
           />
-          {/* Email  */}
 
-          {/* button  */}
-          <button type="submit" className="btn btn-neutral mt-4">
-            Update
+          <button type="submit" className="btn" disabled={loading}>
+            {loading ? (
+              <>
+                <span className="loading loading-spinner"></span>
+                Updating{" "}
+              </>
+            ) : (
+              <>Update </>
+            )}
           </button>
         </fieldset>
       </form>

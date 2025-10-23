@@ -12,10 +12,18 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleSignInWithGoogle = () => {
-    signInWithGoogle()
-      .then((res) => setUser(res.user))
-      .catch((err) => console.log(err.message));
+  const handleSignInWithGoogle = async () => {
+    try {
+      const res = await signInWithGoogle();
+      await setUser(res.user);
+      toast.success("Google login successful!");
+      navigate(location.state ? location.state : "/");
+    } catch (err) {
+      toast.error(err.message);
+    }
+    // signInWithGoogle()
+    //   .then((res) => setUser(res.user))
+    //   .catch((err) => console.log(err.message));
   };
 
   const handleShowPassword = (e) => {
