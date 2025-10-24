@@ -11,8 +11,8 @@ const Choose = () => {
       <h1 className=" py-5  text-3xl font-bold text-[#333333] text-center">
         Why Choose Us ?
       </h1>
-      <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-5">
-        <div className="card bg-base-100 shadow-sm hover:transform hover:scale-105 transition cursor-pointer hover:bg-[#f6b6b4] ">
+      <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-5 my-5 md:my-10">
+        <div className="card bg-base-100 shadow-sm hover:transform hover:scale-105 transition cursor-pointer hover:bg-[#c6eaf3] ">
           <figure className="mt-5 w-20 mx-auto  h-20 flex justify-center items-center">
             <img src={hand} alt="" className="rounded-xl w-10 h-10" />
           </figure>
@@ -26,7 +26,7 @@ const Choose = () => {
             </p>
           </div>
         </div>
-        <div className="card bg-base-100 shadow-sm hover:transform hover:scale-105 transition cursor-pointer hover:bg-[#f6b6b4] ">
+        <div className="card bg-base-100 shadow-sm hover:transform hover:scale-105 transition cursor-pointer hover:bg-[#c6eaf3] ">
           <figure className="mt-5 w-20 mx-auto  h-20 flex justify-center items-center">
             <img src={boy} alt="" className="rounded-xl w-10 h-10" />
           </figure>
@@ -38,7 +38,7 @@ const Choose = () => {
             </p>
           </div>
         </div>
-        <div className="card bg-base-100 shadow-sm hover:transform hover:scale-105 transition cursor-pointer hover:bg-[#f6b6b4] ">
+        <div className="card bg-base-100 shadow-sm hover:transform hover:scale-105 transition cursor-pointer hover:bg-[#c6eaf3] ">
           <figure className="mt-5 w-20 mx-auto  h-20 flex justify-center items-center">
             <img src={trust} alt="" className="rounded-xl w-10 h-10" />
           </figure>
@@ -50,7 +50,7 @@ const Choose = () => {
             </p>
           </div>
         </div>
-        <div className="card bg-base-100 shadow-sm hover:transform hover:scale-105 transition cursor-pointer hover:bg-[#f6b6b4] ">
+        <div className="card bg-base-100 shadow-sm hover:transform hover:scale-105 transition cursor-pointer hover:bg-[#c6eaf3] ">
           <figure className="mt-5 w-20 mx-auto  h-20 flex justify-center items-center">
             <img src={bus} alt="" className="rounded-xl w-10 h-10" />
           </figure>

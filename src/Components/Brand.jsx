@@ -9,7 +9,7 @@ const Brand = () => {
   ));
   return (
     <div>
-      <h1 className=" py-3 text-3xl  font-bold text-center text-[#333333]">
+      <h1 className="  text-3xl  font-bold text-center text-[#333333]">
         Brands
       </h1>
       <div className="gradientBtn my-5 md:my-10 ">
