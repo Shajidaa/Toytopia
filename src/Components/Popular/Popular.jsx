@@ -12,7 +12,7 @@ const Popular = () => {
   }
   return (
     <MyContainer className={"py-5 "}>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center ">
         <h1 className=" py-3 text-3xl font-bold text-[#333333]">
           Popular Toys
         </h1>
@@ -32,9 +32,9 @@ const Popular = () => {
           rounded-2xl shadow-sm p-4
            flex flex-col gap-2
              hover:shadow-lg
-             hover:-translate-y-1 transition"
+             hover:-translate-y-1 transition border border-[#e57368]"
           >
-            <div className=" flex justify-center items-center">
+            <div className=" flex justify-center items-center ">
               <img
                 className="w-[295px] h-[198px] rounded-xl  object-contain"
                 src={toy.pictureURL}

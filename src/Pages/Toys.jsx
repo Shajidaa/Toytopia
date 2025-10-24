@@ -20,7 +20,7 @@ const Toys = () => {
             className=" bg-white
           rounded-2xl shadow-sm p-5
            flex flex-col gap-2
-            hover:shadow-lg 
+            hover:shadow-lg border border-[#e57368]
              hover:-translate-y-1 transition"
           >
             <div className=" flex justify-center items-center">

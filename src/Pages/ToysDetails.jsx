@@ -42,7 +42,7 @@ const ToysDetails = () => {
   return (
     <div className="max-w-7xl mx-auto p-6">
       <title>Toy Details</title>
-      <div className="card  p-2 bg-[#ebe0e0] shadow-xl ">
+      <div className="card border border-[#e57368] p-2 bg-[#ebe0e0] shadow-xl ">
         <Link
           to="/"
           className=" underline mb-4 flex items-center gap-2  border-primary text-blue-600 hover:text-accent "
