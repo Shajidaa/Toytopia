@@ -4,7 +4,6 @@ import { FaArrowLeft, FaCheckCircle, FaStar } from "react-icons/fa";
 import { toast } from "react-toastify";
 import Rating from "../Components/Rating";
 import Spinner from "../Components/Spinner/Spinner";
-import Error from "./Error";
 
 const ToysDetails = () => {
   const { id } = useParams();
@@ -14,9 +13,7 @@ const ToysDetails = () => {
   if (loading) {
     return <Spinner></Spinner>;
   }
-  // if (!singleToys) {
-  //   return <Error></Error>;
-  // }
+
   const {
     toyName,
 
@@ -44,7 +41,7 @@ const ToysDetails = () => {
   };
   return (
     <div className="max-w-7xl mx-auto p-6">
-      <title>Toy Details Page</title>
+      <title>Toy Details</title>
       <div className="card p-2 bg-base-100 shadow-xl ">
         <Link
           to="/"
@@ -61,10 +58,10 @@ const ToysDetails = () => {
         </figure>
 
         <div className="card-body ">
-          <h2 className="card-title text-3xl font-bold text-primary">
+          <h2 className="card-title md:text-3xl text-base text-wrap  font-bold text-primary">
             {toyName}
             {isPopular && (
-              <div className="badge bg-primary text-white border-none ml-2">
+              <div className="badge bg-primary text-nowrap text-white border-none ml-2">
                 🔥 Popular
               </div>
             )}

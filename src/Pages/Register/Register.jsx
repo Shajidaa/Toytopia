@@ -15,7 +15,22 @@ const Register = () => {
   const handleSignInWithGoogle = () => {
     signInWithGoogle()
       .then((res) => setUser(res.user))
-      .catch((err) => console.log(err.message));
+      .catch((err) => {
+        let message = "Oops! Something went wrong. Please try again.";
+
+        if (err.code === "auth/popup-closed-by-user") {
+          message = "Login was cancelled. Please try again.";
+        } else if (err.code === "auth/network-request-failed") {
+          message =
+            "Network issue detected. Check your internet connection and retry.";
+        } else if (
+          err.code === "auth/account-exists-with-different-credential"
+        ) {
+          message =
+            "This email is already linked to another login method. Try signing in differently.";
+        }
+        toast.error(message);
+      });
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -42,7 +57,18 @@ const Register = () => {
       setUser({ ...user, displayName, photoURL });
       navigate("/");
     } catch (err) {
-      console.log(err.message);
+      let message = "Oops! Something went wrong. Please try again.";
+
+      if (err.code === "auth/popup-closed-by-user") {
+        message = "Login was cancelled. Please try again.";
+      } else if (err.code === "auth/network-request-failed") {
+        message =
+          "Network issue detected. Check your internet connection and retry.";
+      } else if (err.code === "auth/account-exists-with-different-credential") {
+        message =
+          "This email is already linked to another login method. Try signing in differently.";
+      }
+      toast.error(message);
     }
   };
   const handleShowPassword = (e) => {

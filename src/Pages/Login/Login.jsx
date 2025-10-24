@@ -19,7 +19,18 @@ const Login = () => {
       toast.success("Google login successful!");
       navigate(location.state ? location.state : "/");
     } catch (err) {
-      toast.error(err.message);
+      let message = "Oops! Something went wrong. Please try again.";
+
+      if (err.code === "auth/popup-closed-by-user") {
+        message = "Login was cancelled. Please try again.";
+      } else if (err.code === "auth/network-request-failed") {
+        message =
+          "Network issue detected. Check your internet connection and retry.";
+      } else if (err.code === "auth/account-exists-with-different-credential") {
+        message =
+          "This email is already linked to another login method. Try signing in differently.";
+      }
+      toast.error(message);
     }
   };
 
@@ -41,7 +52,18 @@ const Login = () => {
       toast.success("Your login successfully!");
       navigate(location.state ? location.state : "/");
     } catch (err) {
-      toast.error(err.message);
+      let message =
+        "Unable to log in. Please check your credentials and try again.";
+
+      if (err.code === "auth/user-not-found") {
+        message = "No account found with this email.";
+      } else if (err.code === "auth/wrong-password") {
+        message = "Incorrect password. Please try again.";
+      } else if (err.code === "auth/too-many-requests") {
+        message = "Too many failed attempts. Please try again later.";
+      }
+
+      toast.error(message);
     }
   };
 

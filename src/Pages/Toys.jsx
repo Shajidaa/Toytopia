@@ -13,19 +13,19 @@ const Toys = () => {
     <MyContainer className={"py-5 "}>
       <title> Toys section</title>
       <h1 className="text-center py-3 text-3xl font-bold">Our All Toys</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-5 md:my-15 ">
         {toys.map((toy) => (
           <div
             key={toy.toyId}
             className=" bg-white
-          rounded-2xl shadow-sm p-4
+          rounded-2xl shadow-sm p-5
            flex flex-col gap-2
-            hover:shadow-lg
+            hover:shadow-lg 
              hover:-translate-y-1 transition"
           >
-            <div className="w-[295px] h-[198px]">
+            <div className=" flex justify-center items-center">
               <img
-                className="rounded-xl w-full h-full object-contain"
+                className="w-[295px] h-[198px] rounded-xl object-contain"
                 src={toy.pictureURL}
                 alt={toy.toyName}
               />

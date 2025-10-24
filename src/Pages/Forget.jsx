@@ -23,7 +23,17 @@ const Forget = () => {
       toast.success("Password reset email sent");
       navigate("/login");
     } catch (error) {
-      toast.error(error.message);
+      let message = "Unable to send reset email. Please try again later.";
+
+      if (error.code === "auth/user-not-found") {
+        message = "No account found with this email address.";
+      } else if (error.code === "auth/invalid-email") {
+        message = "The email address is invalid. Please check and try again.";
+      } else if (error.code === "auth/too-many-requests") {
+        message = "Too many requests. Please wait and try again later.";
+      }
+
+      toast.error(message);
     }
   };
 
