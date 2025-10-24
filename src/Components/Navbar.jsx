@@ -61,7 +61,7 @@ const Navbar = () => {
               <img
                 className="w-full h-full object-contain"
                 src={
-                  "https://i.ibb.co.com/BHVYCnrs/Toy-Topia-Logo-with-Playful-Elements-1-removebg-preview.png"
+                  "https://i.ibb.co.com/mgLPLgj/7b902309-4336-4cf9-8ec6-c3bc50c557a2-removebg-preview.png"
                 }
                 alt=""
               />
