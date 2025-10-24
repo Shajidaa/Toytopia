@@ -3,21 +3,23 @@ import { AuthContext } from "../Provider/AuthContext";
 import { toast } from "react-toastify";
 import useToys from "../Hooks/Hook";
 import Spinner from "../Components/Spinner/Spinner";
-import { Link, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 
 const Forget = () => {
   const { loading } = useToys();
   const { forgetPassword } = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
+  const email = location.state?.email || "";
   if (loading) {
     return <Spinner></Spinner>;
   }
-  const email = localStorage.getItem("email") || "";
+
   const handleReset = async (e) => {
     e.preventDefault();
-
+    const emailValue = e.target.email.value;
     try {
-      await forgetPassword(email);
+      await forgetPassword(emailValue);
       toast.success("Password reset email sent");
       navigate("/login");
     } catch (error) {
@@ -33,7 +35,12 @@ const Forget = () => {
           <form onSubmit={handleReset}>
             <fieldset className="fieldset">
               <label className="label">Email</label>
-              <input type="email" className="input" defaultValue={email} />
+              <input
+                type="email"
+                className="input"
+                name="email"
+                defaultValue={email}
+              />
 
               <button className="btn btn-neutral mt-4">Reset</button>
             </fieldset>

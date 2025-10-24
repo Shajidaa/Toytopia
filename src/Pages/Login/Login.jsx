@@ -47,12 +47,8 @@ const Login = () => {
 
   const handleForgetPassword = () => {
     const email = emailRef.current.value;
-    if (!email) {
-      toast.info("Please enter your email !");
-      return;
-    }
-    localStorage.setItem("email", emailRef.current?.value || "");
-    navigate("/forget");
+
+    navigate("/forget", { state: { email } });
   };
 
   return (
@@ -84,7 +80,7 @@ const Login = () => {
                 <span
                   type="button"
                   onClick={handleShowPassword}
-                  className="absolute right-[25px] top-[34px] cursor-pointer z-50"
+                  className="absolute right-[25px] top-[34px] cursor-pointer "
                 >
                   {show ? <FaEye></FaEye> : <IoEyeOff></IoEyeOff>}
                 </span>

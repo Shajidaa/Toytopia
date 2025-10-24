@@ -11,6 +11,7 @@ import Forget from "../Pages/Forget";
 import PrivateProvider from "../Provider/PrivateProvider";
 import Profile from "../Pages/Profile/Profile";
 import Register from "../Pages/Register/Register";
+import Offers from "../Pages/Offers/Offers";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,15 @@ const router = createBrowserRouter([
         element: (
           <PrivateProvider>
             <Profile></Profile>
+          </PrivateProvider>
+        ),
+      },
+      {
+        path: "/offers",
+
+        element: (
+          <PrivateProvider>
+            <Offers></Offers>
           </PrivateProvider>
         ),
       },
