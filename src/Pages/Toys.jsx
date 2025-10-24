@@ -1,11 +1,12 @@
 import { Link } from "react-router";
 import useToys from "../Hooks/Hook";
 import MyContainer from "../MyContainer/MyContainer";
+import Spinner from "../Components/Spinner/Spinner";
 
 const Toys = () => {
   const { toys, loading } = useToys();
   if (loading) {
-    return <p>loading........</p>;
+    return <Spinner></Spinner>;
   }
 
   return (
@@ -19,12 +20,12 @@ const Toys = () => {
             className=" bg-white
           rounded-2xl shadow-sm p-4
            flex flex-col gap-2
-            text-center hover:shadow-lg
+            hover:shadow-lg
              hover:-translate-y-1 transition"
           >
-            <div>
+            <div className="w-[295px] h-[198px]">
               <img
-                className="rounded-xl"
+                className="rounded-xl w-full h-full object-contain"
                 src={toy.pictureURL}
                 alt={toy.toyName}
               />

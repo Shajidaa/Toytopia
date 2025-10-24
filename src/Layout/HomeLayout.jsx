@@ -9,15 +9,19 @@ import Spinner from "../Components/Spinner/Spinner";
 
 const HomeLayout = () => {
   const { loading } = useContext(AuthContext);
+
   if (loading) {
     return <Spinner></Spinner>;
   }
+
   return (
     <>
       <Navbar></Navbar>
+
       <main className="bg-[#fff8f7]">
         <Outlet></Outlet>
       </main>
+
       <Footer></Footer>
     </>
   );

@@ -1,17 +1,17 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { IoEyeOff } from "react-icons/io5";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../Provider/AuthContext";
-import { toast } from "react-toastify";
-import "./Login.css";
+import { toast, ToastContainer } from "react-toastify";
+
 const Login = () => {
   const [show, setShow] = useState(null);
 
   const { signInWithGoogle, setUser, logIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
-
+  const emailRef = useRef();
   const handleSignInWithGoogle = async () => {
     try {
       const res = await signInWithGoogle();
@@ -45,8 +45,18 @@ const Login = () => {
     }
   };
 
+  const handleForgetPassword = () => {
+    const email = emailRef.current.value;
+    if (!email) {
+      toast.info("Please enter your email !");
+      return;
+    }
+    localStorage.setItem("email", emailRef.current?.value || "");
+    navigate("/forget");
+  };
+
   return (
-    <div className="flex justify-center items-center  py-2 fixedHight ">
+    <div className="flex justify-center items-center  py-2 min-h-dvh ">
       <title> Login page</title>
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
         <div className="card-body">
@@ -58,6 +68,8 @@ const Login = () => {
                 name="email"
                 className="input"
                 placeholder="Email"
+                ref={emailRef}
+                required
               />
               {/* password */}
               <div className="relative">
@@ -78,9 +90,12 @@ const Login = () => {
                 </span>
               </div>
               <div>
-                <Link to={"/forget"} className="link link-hover">
+                <button
+                  onClick={handleForgetPassword}
+                  className="link link-hover"
+                >
                   Forgot password?
-                </Link>
+                </button>
               </div>
               <button className="btn btn-neutral mt-4">Login</button>
             </fieldset>

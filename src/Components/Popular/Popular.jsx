@@ -34,9 +34,9 @@ const Popular = () => {
              hover:shadow-lg
              hover:-translate-y-1 transition"
           >
-            <div>
+            <div className="w-[295px] h-[198px]">
               <img
-                className="rounded-xl"
+                className="rounded-xl w-full h-full object-contain"
                 src={toy.pictureURL}
                 alt={toy.toyName}
               />

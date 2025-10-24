@@ -1,83 +1,50 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthContext";
-import { toast } from "react-toastify";
-import "./P.css";
+
+import UpdateFrom from "../../Components/UpdateForm/UpdateFrom";
+import Spinner from "../../Components/Spinner/Spinner";
 const Profile = () => {
-  const { user, setUser, updateProfileFunc, loading, setLoading } =
-    useContext(AuthContext);
+  const { user, loading } = useContext(AuthContext);
 
-  const handleUpdate = async (e) => {
-    e.preventDefault();
-    const from = e.target;
-    const displayName = from.name.value;
-    const photoURL = from.photo.value;
-    setLoading(true);
-    try {
-      if (displayName && !photoURL) {
-        await updateProfileFunc({ ...user, displayName });
-
-        toast.success("Update successfully");
-        setUser({ ...user, displayName });
-      } else if (!displayName && photoURL) {
-        await updateProfileFunc({ ...user, photoURL });
-
-        toast.success("Update successfully");
-        setUser({ ...user, photoURL });
-      } else if (displayName && photoURL) {
-        await updateProfileFunc({ ...user, displayName, photoURL });
-
-        toast.success("Update successfully");
-        setUser({ ...user, displayName, photoURL });
-      }
-      from.reset();
-    } catch (err) {
-      console.log(err.message);
-      toast.error("Failed to update Profile .Please Try again");
-    } finally {
-      setLoading(false);
-    }
-  };
+  if (loading) {
+    return <Spinner></Spinner>;
+  }
 
   return (
-    <div className="flex justify-center items-center fixedHight">
+    <div className="flex justify-center items-center min-h-dvh">
       <title> Profile </title>
-      <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
-        <img
-          src={user.photoURL}
-          alt=""
-          className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square"
-        />
-        <div>
-          <h2>Name:{user.displayName}</h2>
-          <h2>Email:{user.email}</h2>
+      <div className=" p-6 shadow-md rounded-xl sm:px-12">
+        <div className="flex md:flex-row flex-col justify-between gap-3.5  items-center ">
+          <img
+            src={user.photoURL}
+            alt=""
+            className="w-32 h-32  mx-auto rounded-full aspect-square"
+          />
+          <div className="divider divider-horizontal "></div>
+          <div className="relative">
+            <h2>
+              {" "}
+              <span className="text-xl font-semibold text-blue-500">
+                Name:{" "}
+              </span>
+              <span className="text-lg font-medium text-[#333333]">
+                {user.displayName}{" "}
+              </span>
+            </h2>
+            <br />
+            <h2 className="text-lg font-medium text-[#333333]">
+              <span className="text-xl font-semibold text-blue-500">
+                Email:
+              </span>
+              {user.email}
+            </h2>
+            <br />
+            <div>
+              <UpdateFrom></UpdateFrom>
+            </div>
+          </div>
         </div>
       </div>
-      <form onSubmit={handleUpdate}>
-        <fieldset className="fieldset">
-          {/* Name  */}
-          <label className="label">Name</label>
-          <input type="text" name="name" className="input" placeholder="Name" />
-          {/* Photo  */}
-          <label className="label">Photo URL</label>
-          <input
-            type="text"
-            name="photo"
-            className="input"
-            placeholder="Photo Url"
-          />
-
-          <button type="submit" className="btn" disabled={loading}>
-            {loading ? (
-              <>
-                <span className="loading loading-spinner"></span>
-                Updating{" "}
-              </>
-            ) : (
-              <>Update </>
-            )}
-          </button>
-        </fieldset>
-      </form>
     </div>
   );
 };

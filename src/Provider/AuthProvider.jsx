@@ -27,10 +27,7 @@ const AuthProvider = ({ children }) => {
     // setLoading(true);
     return updateProfile(auth.currentUser, updateData);
   };
-  // const updateEditProfileFunc = (updateData) => {
-  //   setLoading(true);
-  //   return updateProfile(auth.currentUser, updateData);
-  // };
+
   //login
   const logIn = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
@@ -49,7 +46,7 @@ const AuthProvider = ({ children }) => {
   //forget password
 
   const forgetPassword = (email) => {
-    setLoading(true);
+    // setLoading(true);
     return sendPasswordResetEmail(auth, email);
   };
   useEffect(() => {
