@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 import MyContainer from "../MyContainer/MyContainer";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthContext";
@@ -6,9 +6,10 @@ import { TbUser } from "react-icons/tb";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-
+  const navigate = useNavigate();
   const handleLogOut = () => {
     logOut();
+    navigate("/");
   };
   const links = (
     <>

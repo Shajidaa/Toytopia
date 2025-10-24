@@ -34,10 +34,10 @@ const Banner = () => {
             <div className="hero-overlay"></div>
             <div className="hero-content text-neutral-content text-center">
               <div className="">
-                <h1 className="mb-5 text-5xl font-bold">
+                <h1 className="mb-5 md:text-5xl text-2xl font-bold">
                   Where Imagination Comes to Play!
                 </h1>
-                <p className="mb-5 max-w-md text-base mx-auto">
+                <p className="mb-5 md:max-w-md text-base mx-auto">
                   Discover a magical world of toys that spark creativity,
                   laughter, and endless adventures — all in one place!
                 </p>
@@ -62,10 +62,10 @@ const Banner = () => {
             <div className="hero-overlay"></div>
             <div className="hero-content text-neutral-content text-center">
               <div className="">
-                <h1 className="mb-5 text-5xl font-bold">
+                <h1 className="mb-5 md:text-5xl text-2xl font-bold">
                   Toys That Grow With Your Child
                 </h1>
-                <p className="mb-5  max-w-md text-base mx-auto">
+                <p className="mb-5  md:max-w-md text-base mx-auto">
                   From building blocks to brainy puzzles, explore toys that
                   inspire learning while keeping playtime exciting!
                 </p>
@@ -91,10 +91,10 @@ const Banner = () => {
             <div className="hero-overlay"></div>
             <div className="hero-content text-neutral-content text-center">
               <div className="">
-                <h1 className="mb-5 text-5xl font-bold">
+                <h1 className="mb-5 md:text-5xl text-2xl font-bold">
                   Colorful Fun for Every Little Dreamer
                 </h1>
-                <p className="mb-5 max-w-md text-base mx-auto">
+                <p className="mb-5 md:max-w-md text-base mx-auto">
                   Find bright, safe, and joyful toys designed to bring smiles
                   and make every moment a memory.
                 </p>
@@ -119,10 +119,10 @@ const Banner = () => {
             <div className="hero-overlay"></div>
             <div className="hero-content text-neutral-content text-center">
               <div className="">
-                <h1 className="mb-5 text-5xl font-bold">
+                <h1 className="mb-5 md:text-5xl text-2xl font-bold">
                   Your Local Toy Wonderland!
                 </h1>
-                <p className="mb-5 max-w-md text-base mx-auto">
+                <p className="mb-5 md:max-w-md text-base mx-auto">
                   Support local toy sellers and discover one-of-a-kind treasures
                   made with love for your little ones.
                 </p>
@@ -147,10 +147,10 @@ const Banner = () => {
             <div className="hero-overlay"></div>
             <div className="hero-content text-neutral-content text-center">
               <div className="">
-                <h1 className="mb-5 text-5xl font-bold">
+                <h1 className="mb-5 md:text-5xl text-2xl font-bold">
                   Learn Through Playtime Magic!
                 </h1>
-                <p className="mb-5 max-w-md text-base mx-auto">
+                <p className="mb-5 md:max-w-md text-base mx-auto">
                   Explore toys that make every giggle a moment of growth — where
                   fun meets imagination and learning begins naturally.
                 </p>

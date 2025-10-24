@@ -4,6 +4,7 @@ import { FaArrowLeft, FaCheckCircle, FaStar } from "react-icons/fa";
 import { toast } from "react-toastify";
 import Rating from "../Components/Rating";
 import Spinner from "../Components/Spinner/Spinner";
+import Error from "./Error";
 
 const ToysDetails = () => {
   const { id } = useParams();
@@ -13,17 +14,12 @@ const ToysDetails = () => {
   if (loading) {
     return <Spinner></Spinner>;
   }
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    e.target.reset();
-    return toast.success(
-      `Thanks ${name}! You tried ${toyName} successfully!🎉`
-    );
-  };
+  // if (!singleToys) {
+  //   return <Error></Error>;
+  // }
   const {
     toyName,
+
     sellerName,
     sellerEmail,
     price,
@@ -37,6 +33,15 @@ const ToysDetails = () => {
     brandName,
   } = singleToys;
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    e.target.reset();
+    return toast.success(
+      `Thanks ${name}! You tried ${toyName} successfully!🎉`
+    );
+  };
   return (
     <div className="max-w-7xl mx-auto p-6">
       <title>Toy Details Page</title>
