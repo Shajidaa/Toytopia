@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router";
 import MyContainer from "../MyContainer/MyContainer";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthContext";
+import { TbUser } from "react-icons/tb";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -24,7 +25,7 @@ const Navbar = () => {
   );
   return (
     <div className={`bg-[#fff8f7]! shadow-sm sticky top-0 z-50`}>
-      <MyContainer className="navbar ">
+      <MyContainer className="navbar">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
@@ -52,13 +53,15 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="h-20 ">
-            <img
-              className="w-full h-full object-contain"
-              src={
-                "https://i.ibb.co.com/7JphcGsC/download-removebg-preview.png"
-              }
-              alt=""
-            />
+            <Link to={"/"}>
+              <img
+                className="w-full h-full object-contain"
+                src={
+                  "https://i.ibb.co.com/7JphcGsC/download-removebg-preview.png"
+                }
+                alt=""
+              />
+            </Link>
           </div>
         </div>
         <div className="navbar-center hidden md:flex">
@@ -70,7 +73,7 @@ const Navbar = () => {
               {" "}
               <div
                 data-tip={user.displayName}
-                className="size-12 tooltip tooltip-error tooltip-bottom border-2 border-[#dc7977] rounded-full "
+                className="md:size-12 size-8 tooltip tooltip-error tooltip-bottom border-2 border-[#dc7977] rounded-full "
               >
                 <img
                   className="w-full bg-cover h-full rounded-full  "
@@ -83,9 +86,12 @@ const Navbar = () => {
               </Link>
             </div>
           ) : (
-            <Link to={"login"} className="btn">
-              Login
-            </Link>
+            <div className="flex justify-center items-center gap-2">
+              <TbUser className="md:size-8 size-5" />
+              <Link to={"login"} className="btn">
+                Login
+              </Link>
+            </div>
           )}
         </div>
       </MyContainer>

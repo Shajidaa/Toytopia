@@ -12,7 +12,6 @@
     "subCategory": "Building Blocks",
     "category": "Construction Toys",
     "isPopular": true,
-
     "brandName": "LEGO"
   },
   {
@@ -28,7 +27,6 @@
     "subCategory": "Building Blocks",
     "category": "Construction Toys",
     "isPopular": false,
-    "isBrand": true,
     "brandName": "Mega Bloks"
   },
   {
@@ -44,7 +42,6 @@
     "subCategory": "Engineering Kits",
     "category": "Construction Toys",
     "isPopular": true,
-    "isBrand": true,
     "brandName": "K’NEX"
   },
   {
@@ -60,7 +57,6 @@
     "subCategory": "Magnetic Blocks",
     "category": "Construction Toys",
     "isPopular": false,
-    "isBrand": true,
     "brandName": "Magna-Tiles"
   },
   {
@@ -76,7 +72,6 @@
     "subCategory": "Doll Houses",
     "category": "Dolls & Accessories",
     "isPopular": true,
-    "isBrand": true,
     "brandName": "Barbie"
   },
   {
@@ -92,7 +87,6 @@
     "subCategory": "Baby Dolls",
     "category": "Dolls & Accessories",
     "isPopular": false,
-    "isBrand": true,
     "brandName": "Baby Alive"
   },
   {
@@ -108,7 +102,6 @@
     "subCategory": "Fashion Dolls",
     "category": "Dolls & Accessories",
     "isPopular": true,
-    "isBrand": true,
     "brandName": "Barbie"
   },
   {
@@ -124,7 +117,6 @@
     "subCategory": "Collectible Dolls",
     "category": "Dolls & Accessories",
     "isPopular": false,
-    "isBrand": true,
     "brandName": "LOL Surprise"
   },
   {
@@ -140,7 +132,6 @@
     "subCategory": "Race Cars",
     "category": "Vehicles",
     "isPopular": false,
-    "isBrand": true,
     "brandName": "Hot Wheels"
   },
   {
@@ -156,7 +147,6 @@
     "subCategory": "Monster Trucks",
     "category": "Vehicles",
     "isPopular": false,
-    "isBrand": false,
     "brandName": "ToyArena"
   },
   {
@@ -172,7 +162,6 @@
     "subCategory": "RC Toys",
     "category": "Vehicles",
     "isPopular": true,
-    "isBrand": false,
     "brandName": "FlyHigh"
   },
   {
@@ -188,7 +177,6 @@
     "subCategory": "Mini Cars",
     "category": "Vehicles",
     "isPopular": false,
-    "isBrand": false,
     "brandName": "AutoKids"
   },
   {
@@ -204,7 +192,6 @@
     "subCategory": "Learning Boards",
     "category": "Educational Toys",
     "isPopular": false,
-    "isBrand": false,
     "brandName": "EduToys"
   },
   {
@@ -220,7 +207,6 @@
     "subCategory": "Puzzles",
     "category": "Educational Toys",
     "isPopular": false,
-    "isBrand": false,
     "brandName": "BrainyKids"
   },
   {
@@ -236,7 +222,6 @@
     "subCategory": "STEM Kits",
     "category": "Educational Toys",
     "isPopular": true,
-    "isBrand": true,
     "brandName": "SmartPlay"
   },
   {
@@ -252,7 +237,6 @@
     "subCategory": "Geography Toys",
     "category": "Educational Toys",
     "isPopular": false,
-    "isBrand": false,
     "brandName": "GeoKids"
   },
   {
@@ -268,7 +252,6 @@
     "subCategory": "Outdoor Play",
     "category": "Outdoor Fun",
     "isPopular": false,
-    "isBrand": false,
     "brandName": "PlayZone"
   },
   {
@@ -284,7 +267,6 @@
     "subCategory": "Gardening",
     "category": "Outdoor Fun",
     "isPopular": false,
-    "isBrand": false,
     "brandName": "NatureToys"
   }
 ]
