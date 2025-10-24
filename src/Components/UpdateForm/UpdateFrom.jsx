@@ -34,7 +34,7 @@ const UpdateFrom = () => {
       }
       from.reset();
     } catch (err) {
-      console.log(err.message);
+      // console.log(err.message);
       toast.error("Failed to update Profile .Please Try again");
     } finally {
       setLoading(false);
