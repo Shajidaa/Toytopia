@@ -10,7 +10,7 @@ const Footer = () => {
        lg:flex-row lg:space-y-0"
       >
         <div className="lg:w-1/4">
-          <h1 className="self-center text-2xl font-semibold">KidzHaven</h1>
+          <h1 className="self-center text-2xl font-semibold">ToyTopia</h1>
 
           <p className="text-sm text-[#333333]  ">
             Bringing joy and imagination to kids with fun, safe, and creative

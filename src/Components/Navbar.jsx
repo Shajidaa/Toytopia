@@ -56,12 +56,12 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <div className="md:h-20 ">
+          <div className="h-22">
             <Link to={"/"}>
               <img
                 className="w-full h-full object-contain"
                 src={
-                  "https://i.ibb.co.com/7JphcGsC/download-removebg-preview.png"
+                  "https://i.ibb.co.com/23nTC8pW/Toy-Topia-Logo-with-Playful-Elements.png"
                 }
                 alt=""
               />

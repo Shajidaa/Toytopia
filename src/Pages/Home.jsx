@@ -6,7 +6,7 @@ import Popular from "../Components/Popular/Popular";
 const Home = () => {
   return (
     <div>
-      <title>Home| KidzHaven</title>
+      <title>Home| ToyTopia</title>
       <Banner></Banner>
       <Popular></Popular>
       <Brand></Brand>
