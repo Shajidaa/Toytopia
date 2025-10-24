@@ -90,16 +90,25 @@ const Login = () => {
                 </span>
               </div>
               <div>
-                <button
+                <p
                   onClick={handleForgetPassword}
-                  className="link link-hover"
+                  className="text-right text-blue-500 hover:text-blue-800 hover:underline cursor-pointer"
                 >
                   Forgot password?
-                </button>
+                </p>
               </div>
               <button className="btn btn-neutral mt-4">Login</button>
             </fieldset>
           </form>
+          <p>
+            Are you new to here?
+            <Link
+              to={"/register"}
+              className="text-pink-500 ml-2 hover:text-blue-800 hover:underline cursor-pointer"
+            >
+              Register
+            </Link>
+          </p>
           <div className="divider divider-secondary">or</div>
           <button
             onClick={handleSignInWithGoogle}
@@ -134,12 +143,6 @@ const Login = () => {
             </svg>
             Login with Google
           </button>
-          <p>
-            Are you new to here? Please go to{" "}
-            <Link to={"/register"} className="underline ">
-              Register
-            </Link>
-          </p>
         </div>
       </div>
     </div>
