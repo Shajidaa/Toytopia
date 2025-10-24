@@ -15,7 +15,7 @@ const HomeLayout = () => {
 
   useEffect(() => {
     setPathLoading(true);
-    const timer = setTimeout(() => setPathLoading(false), 300);
+    const timer = setTimeout(() => setPathLoading(false), 700);
     return () => clearTimeout(timer);
   }, [location]);
 

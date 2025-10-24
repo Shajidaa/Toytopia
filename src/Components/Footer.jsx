@@ -3,7 +3,7 @@ import MyContainer from "../MyContainer/MyContainer";
 
 const Footer = () => {
   return (
-    <footer className="px-4  w-full gradient">
+    <footer className="px-4  w-full gradientBg">
       <MyContainer
         className="container flex
        flex-col justify-between py-10 mx-auto space-y-8 

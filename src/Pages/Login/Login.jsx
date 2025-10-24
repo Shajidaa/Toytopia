@@ -103,7 +103,7 @@ const Login = () => {
                 <span
                   type="button"
                   onClick={handleShowPassword}
-                  className="absolute right-[25px] top-[34px] cursor-pointer "
+                  className="absolute right-[25px] top-[34px] z-10 cursor-pointer "
                 >
                   {show ? <FaEye></FaEye> : <IoEyeOff></IoEyeOff>}
                 </span>

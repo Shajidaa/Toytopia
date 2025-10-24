@@ -20,7 +20,9 @@ const Forget = () => {
     const emailValue = e.target.email.value;
     try {
       await forgetPassword(emailValue);
+      window.open("https://mail.google.com", "_blank");
       toast.success("Password reset email sent");
+
       navigate("/login");
     } catch (error) {
       let message = "Unable to send reset email. Please try again later.";

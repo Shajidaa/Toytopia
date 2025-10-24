@@ -25,7 +25,9 @@
   background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
 }
 
-
+.gradientBg {
+  background-image: linear-gradient(to left bottom, #e57368, #e67e73, #e6887e, #e6938a, #e69d95, #ea9b99, #ee999d, #f197a2, #f689a8, #f77bb4, #f26fc5, #e568da);
+}
 
 .navLink {
   @apply ml-5 font-semibold text-lg text-primary
