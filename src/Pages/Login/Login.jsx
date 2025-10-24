@@ -81,31 +81,37 @@ const Login = () => {
         <div className="card-body">
           <form onSubmit={handleLogIn}>
             <fieldset className="fieldset">
-              <label className="label">Email</label>
+              <label className="label text-gray-900 text-base">Email</label>
               <input
                 type="email"
                 name="email"
-                className="input"
-                placeholder="Email"
+                className="input placeholder:text-gray-400"
+                placeholder="example@gmail.com"
                 ref={emailRef}
                 required
               />
               {/* password */}
               <div className="relative">
-                <label className="label">Password</label>
+                <label className="label  text-gray-900 text-base">
+                  Password
+                </label>
                 <input
                   type={show ? "text" : "password"}
                   name="password"
-                  className="input"
+                  className="input placeholder:text-gray-400"
                   placeholder="••••••••"
                   required
                 />
                 <span
                   type="button"
                   onClick={handleShowPassword}
-                  className="absolute right-[25px] top-[34px] z-10 cursor-pointer "
+                  className="absolute right-[25px] top-[35px] z-10 cursor-pointer "
                 >
-                  {show ? <FaEye></FaEye> : <IoEyeOff></IoEyeOff>}
+                  {show ? (
+                    <FaEye className="text-lg text-gray-500"></FaEye>
+                  ) : (
+                    <IoEyeOff className="text-lg text-gray-500"></IoEyeOff>
+                  )}
                 </span>
               </div>
               <div>
@@ -116,7 +122,9 @@ const Login = () => {
                   Forgot password?
                 </p>
               </div>
-              <button className="btn btn-neutral mt-4">Login</button>
+              <button className="btn bg-linear-to-r from-[#e69d95] to-blue-500  hover:from-[#ec958b] hover:to-blue-800  text-white  mt-4">
+                Login
+              </button>
             </fieldset>
           </form>
           <p>

@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import useToys from "../Hooks/Hook";
 import MyContainer from "../MyContainer/MyContainer";
 import Spinner from "../Components/Spinner/Spinner";
+import { FaStar } from "react-icons/fa";
 
 const Toys = () => {
   const { toys, loading } = useToys();
@@ -19,8 +20,8 @@ const Toys = () => {
             key={toy.toyId}
             className=" bg-white
           rounded-2xl shadow-sm p-5
-           flex flex-col gap-2
-            hover:shadow-lg border border-[#e57368]
+           flex flex-col gap-2 
+            hover:shadow-lg 
              hover:-translate-y-1 transition"
           >
             <div className=" flex justify-center items-center">
@@ -36,12 +37,14 @@ const Toys = () => {
               <p className="text-gray-600 font-medium">
                 Available: {toy.availableQuantity}
               </p>
-              <p className="text-gray-600 font-medium">⭐ {toy.rating}</p>
+              <p className="text-gray-600 font-medium">
+                <FaStar className="inline text-amber-500" /> {toy.rating}
+              </p>
             </div>
 
             <Link
               to={`/toyDetails/${toy.toyId}`}
-              className="mt-2 btn font-bold rounded-2xl bg-blue-700 text-white  hover:bg-accent
+              className="mt-2 btn font-bold rounded-2xl bg-linear-to-r from-[#e69d95] to-blue-500  hover:from-[#ec958b] hover:to-blue-800  text-white 
              "
             >
               View More

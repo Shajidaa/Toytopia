@@ -86,52 +86,63 @@ const Register = () => {
           <form onSubmit={handleSubmit}>
             <fieldset className="fieldset">
               {/* Name  */}
-              <label className="label">Name</label>
+              <label className="label text-gray-900 text-base">Name</label>
               <input
                 type="text"
                 name="name"
-                className="input"
+                className="input placeholder:text-gray-400 "
                 placeholder="Name"
                 required
               />
               {/* Photo  */}
-              <label className="label">Photo URL</label>
+              <label className="label text-gray-900 text-base">Photo URL</label>
               <input
                 type="text"
                 name="photo"
-                className="input"
-                placeholder="Photo Url"
+                className="input placeholder:text-gray-400"
+                placeholder="https://exampleimage.com"
                 required
               />
               {/* Email  */}
-              <label className="label">Email</label>{" "}
+              <label className="label text-gray-900 text-base">
+                Email
+              </label>{" "}
               <input
                 type="email"
                 name="email"
-                className="input"
-                placeholder="Email"
+                className="input placeholder:text-gray-400"
+                placeholder="example@gmail.com"
                 required
               />
               {/* password */}
               <div className="relative">
-                <label className="label">Password</label>
+                <label className="label text-gray-900 text-base">
+                  Password
+                </label>
                 <input
                   type={show ? "text" : "password"}
                   name="password"
-                  className="input"
+                  className="input placeholder:text-gray-400"
                   placeholder="••••••••"
                   required
                 />
                 <span
                   type="button"
                   onClick={handleShowPassword}
-                  className="absolute right-[25px] top-[34px] cursor-pointer z-50"
+                  className="absolute right-[25px] top-[35px] cursor-pointer z-10"
                 >
-                  {show ? <FaEye></FaEye> : <IoEyeOff></IoEyeOff>}
+                  {show ? (
+                    <FaEye className="text-lg text-gray-500"></FaEye>
+                  ) : (
+                    <IoEyeOff className="text-lg text-gray-500"></IoEyeOff>
+                  )}
                 </span>
               </div>
               {/* button  */}
-              <button type="submit" className="btn btn-neutral mt-4">
+              <button
+                type="submit"
+                className="btn bg-linear-to-r from-[#e69d95] to-blue-500  hover:from-[#ec958b] hover:to-blue-800  text-white  mt-4"
+              >
                 Register
               </button>
             </fieldset>

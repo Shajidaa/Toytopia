@@ -81,7 +81,7 @@ const UpdateFrom = () => {
             <form onSubmit={handleUpdate}>
               <fieldset className="fieldset">
                 {/* Name  */}
-                <label className="label text-lg">Name</label>
+                <label className="label text-gray-900 text-lg">Name</label>
                 <input
                   type="text"
                   name="name"
@@ -90,15 +90,21 @@ const UpdateFrom = () => {
                 />
                 <br />
                 {/* Photo  */}
-                <label className="label text-lg">Photo URL</label>
+                <label className="label text-gray-900  text-lg">
+                  Photo URL
+                </label>
                 <input
                   type="text"
                   name="photo"
-                  className="input"
-                  placeholder="Photo Url"
+                  className="input placeholder:text-gray-500"
+                  placeholder="https://exampleimage.com"
                 />
                 <br />
-                <button type="submit" className="btn" disabled={loading}>
+                <button
+                  type="submit"
+                  className="btn bg-linear-to-r from-[#e69d95] to-blue-500  hover:from-[#ec958b] hover:to-blue-800  text-white  "
+                  disabled={loading}
+                >
                   {loading ? (
                     <>
                       <span className="loading loading-spinner"></span>

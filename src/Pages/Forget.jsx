@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import useToys from "../Hooks/Hook";
 import Spinner from "../Components/Spinner/Spinner";
 import { Link, useLocation, useNavigate } from "react-router";
+import { TbLogout2 } from "react-icons/tb";
 
 const Forget = () => {
   const { loading } = useToys();
@@ -57,15 +58,13 @@ const Forget = () => {
               <button className="btn btn-neutral mt-4">Reset</button>
             </fieldset>
             <br />
-            <p className="text-md text-[#333333]">
-              Want to go back?{" "}
-              <Link
-                to={"/login"}
-                className="hover:underline text-blue-500 hover:text-blue-800 text-md"
-              >
-                Login
-              </Link>
-            </p>
+
+            <Link
+              to={"/login"}
+              className="hover:underline text-blue-500 hover:text-blue-800 text-md"
+            >
+              <TbLogout2 className="inline" /> Login
+            </Link>
           </form>
         </div>
       </div>

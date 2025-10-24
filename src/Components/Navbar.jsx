@@ -85,14 +85,21 @@ const Navbar = () => {
                   alt="User Profile"
                 />
               </div>
-              <Link onClick={handleLogOut} to={"login"} className="btn">
+              <Link
+                onClick={handleLogOut}
+                to={"login"}
+                className="btn bg-linear-to-r from-[#e69d95] to-blue-500  hover:from-[#ec958b] hover:to-blue-800  text-white "
+              >
                 Log Out
               </Link>
             </div>
           ) : (
             <div className="flex justify-center items-center gap-2">
               <TbUser className="md:size-8 size-5" />
-              <Link to={"login"} className="btn">
+              <Link
+                to={"login"}
+                className="btn bg-linear-to-r from-[#e69d95] to-blue-500  hover:from-[#ec958b] hover:to-blue-800  text-white "
+              >
                 Login
               </Link>
             </div>

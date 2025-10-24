@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import useToys from "../../Hooks/Hook";
 import MyContainer from "../../MyContainer/MyContainer";
 import Spinner from "../Spinner/Spinner";
+import { FaStar } from "react-icons/fa";
 
 const Popular = () => {
   const { toys, loading } = useToys();
@@ -29,10 +30,10 @@ const Popular = () => {
           <div
             key={toy.toyId}
             className=" bg-white
-          rounded-2xl shadow-sm p-4
+          rounded-2xl shadow-xl p-4
            flex flex-col gap-2
              hover:shadow-lg
-             hover:-translate-y-1 transition border border-[#e57368]"
+             hover:-translate-y-1 transition "
           >
             <div className=" flex justify-center items-center ">
               <img
@@ -47,12 +48,14 @@ const Popular = () => {
               <p className="text-gray-600 font-medium">
                 Available: {toy.availableQuantity}
               </p>
-              <p className="text-gray-600 font-medium">⭐ {toy.rating}</p>
+              <p className="text-gray-600 font-medium">
+                <FaStar className="inline text-amber-500" /> {toy.rating}
+              </p>
             </div>
 
             <Link
               to={`/toyDetails/${toy.toyId}`}
-              className="mt-2 btn font-bold rounded-2xl bg-blue-700   hover:bg-accent text-white 
+              className="mt-2 btn font-bold rounded-2xl bg-linear-to-r from-[#e69d95] to-blue-500  hover:from-[#ec958b] hover:to-blue-800  text-white 
              "
             >
               View More

@@ -25,7 +25,10 @@ function App() {
     <div style={{ maxWidth: 280, width: "100%" }}>
       <Rating value={rating} onChange={setRating} />
       <div>
-        <div>{` ${getRating(rating)}`}</div>
+        <br />
+        <div className="text-base text-center font-semibold text-gray-600 ">{` ${getRating(
+          rating
+        )}`}</div>
       </div>
     </div>
   );

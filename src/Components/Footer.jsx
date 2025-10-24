@@ -1,4 +1,6 @@
-import { Link } from "react-router";
+import { FaLinkedin } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import MyContainer from "../MyContainer/MyContainer";
 
 const Footer = () => {
@@ -87,21 +89,21 @@ const Footer = () => {
                 href="https://www.facebook.com/profile.php?id=61564677698432"
                 target="blank"
               >
-                Facebook
+                <FaFacebook className="inline" /> Facebook
               </a>
               <a
                 className="hover:underline"
                 href="https://linkedin.com/in/shajida-islam-42660b325"
                 target="blank"
               >
-                Linkedin
+                <FaLinkedin className="inline" /> Linkedin
               </a>
               <a
                 className="hover:underline"
                 href="https://github.com/Shajidaa"
                 target="blank"
               >
-                GitHub
+                <FaGithub className="inline" /> GitHub
               </a>
             </div>
           </div>
