@@ -4,6 +4,7 @@ import MyContainer from "../../MyContainer/MyContainer";
 const Offers = () => {
   return (
     <MyContainer>
+      <title>Offers</title>
       <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10 mb-10 pt-10">
         <div
           className="card bg-base-100  shadow-sm hover:shadow-lg

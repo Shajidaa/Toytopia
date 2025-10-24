@@ -4,6 +4,7 @@ import { IoEyeOff } from "react-icons/io5";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../Provider/AuthContext";
 import { toast, ToastContainer } from "react-toastify";
+import MyContainer from "../../MyContainer/MyContainer";
 
 const Login = () => {
   const [show, setShow] = useState(null);
@@ -74,7 +75,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center  py-2 min-h-dvh ">
+    <MyContainer className="flex px-5  justify-center items-center  py-2 min-h-dvh ">
       <title> Login page</title>
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
         <div className="card-body">
@@ -96,7 +97,7 @@ const Login = () => {
                   type={show ? "text" : "password"}
                   name="password"
                   className="input"
-                  placeholder=".."
+                  placeholder="••••••••"
                   required
                 />
                 <span
@@ -163,7 +164,7 @@ const Login = () => {
           </button>
         </div>
       </div>
-    </div>
+    </MyContainer>
   );
 };
 

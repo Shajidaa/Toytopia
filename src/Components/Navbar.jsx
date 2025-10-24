@@ -56,7 +56,7 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <div className="h-20 ">
+          <div className="md:h-20 ">
             <Link to={"/"}>
               <img
                 className="w-full h-full object-contain"

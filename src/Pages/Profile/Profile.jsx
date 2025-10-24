@@ -3,6 +3,7 @@ import { AuthContext } from "../../Provider/AuthContext";
 
 import UpdateFrom from "../../Components/UpdateForm/UpdateFrom";
 import Spinner from "../../Components/Spinner/Spinner";
+import MyContainer from "../../MyContainer/MyContainer";
 const Profile = () => {
   const { user, loading } = useContext(AuthContext);
 
@@ -11,9 +12,9 @@ const Profile = () => {
   }
 
   return (
-    <div className="flex justify-center items-center min-h-dvh">
+    <MyContainer className="flex justify-center px-5 items-center min-h-dvh">
       <title> Profile </title>
-      <div className=" p-6 shadow-md rounded-xl sm:px-12">
+      <div className=" p-6 shadow-md rounded-xl border border-[#e57368] sm:px-12">
         <div className="flex md:flex-row flex-col justify-between gap-3.5  items-center ">
           <img
             src={user.photoURL}
@@ -45,7 +46,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
-    </div>
+    </MyContainer>
   );
 };
 

@@ -4,9 +4,10 @@ import { AuthContext } from "../../Provider/AuthContext";
 import { toast } from "react-toastify";
 import { FaEye } from "react-icons/fa";
 import { IoEyeOff } from "react-icons/io5";
+import MyContainer from "../../MyContainer/MyContainer";
 
 const Register = () => {
-  const { signInWithGoogle, user, setUser, createUser, updateProfileFunc } =
+  const { signInWithGoogle, setUser, createUser, updateProfileFunc } =
     useContext(AuthContext);
 
   const [show, setShow] = useState(false);
@@ -76,10 +77,9 @@ const Register = () => {
 
     setShow(!show);
   };
-  console.log(user);
 
   return (
-    <div className="flex justify-center items-center  py-2 min-h-dvh ">
+    <MyContainer className="flex justify-center px-5  items-center  py-2 min-h-dvh ">
       <title> Register page</title>
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
         <div className="card-body">
@@ -119,7 +119,7 @@ const Register = () => {
                   type={show ? "text" : "password"}
                   name="password"
                   className="input"
-                  placeholder=".."
+                  placeholder="••••••••"
                   required
                 />
                 <span
@@ -182,7 +182,7 @@ const Register = () => {
           </button>
         </div>
       </div>
-    </div>
+    </MyContainer>
   );
 };
 
