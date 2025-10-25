@@ -56,16 +56,12 @@ const UpdateFrom = () => {
           <button
             type="button"
             onClick={handleToggle}
-            className="flex justify-between w-full p-5 font-medium 
-            rtl:text-right text-blue-500 
-               gap-3"
-            aria-expanded={open}
-            aria-controls="accordion-collapse-body-1"
+            className="flex justify-between w-full p-5 font-medium text-blue-500  relative gap-3"
           >
-            <span>Update your Profile?</span>
+            <span className="text-lg">Update your Profile?</span>
             <svg
-              className={`w-3 h-3 rotate-180 shrink-0 ${
-                open ? "rotate-180" : ""
+              className={`w-4 h-4 transition-transform absolute top-6.5 right-0 duration-300 ${
+                open ? "rotate-0" : "rotate-180"
               }`}
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
@@ -74,9 +70,9 @@ const UpdateFrom = () => {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M9 5 5 1 1 5"
               />
             </svg>

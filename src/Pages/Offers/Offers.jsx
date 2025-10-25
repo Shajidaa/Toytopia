@@ -1,10 +1,12 @@
 import { Link } from "react-router";
 import MyContainer from "../../MyContainer/MyContainer";
+import OfferBanner from "./OfferBanner";
 
 const Offers = () => {
   return (
     <MyContainer>
       <title>Offers</title>
+      <OfferBanner></OfferBanner>
       <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10 py-10 pt-10">
         <div
           className="card bg-base-100  shadow-sm hover:shadow-lg

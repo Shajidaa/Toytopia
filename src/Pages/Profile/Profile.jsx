@@ -20,7 +20,7 @@ const Profile = () => {
             <img
               src={user.photoURL}
               alt=""
-              className="w-32 h-32  mx-auto rounded-full aspect-square"
+              className="w-32 h-32  border-rose-400 border-2 mx-auto rounded-full aspect-square"
             />
             <div className="divider divider-horizontal "></div>
             <div className="relative">
