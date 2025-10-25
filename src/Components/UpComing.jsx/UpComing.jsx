@@ -4,10 +4,13 @@ import { Link } from "react-router";
 import MyCountDown from "./MyCountDown";
 
 import { AuthContext } from "../../Provider/AuthContext";
+import { toast } from "react-toastify";
 
 const UpComing = () => {
   const { user } = useContext(AuthContext);
-
+  const handleToast = () => {
+    return toast.success("You’ll be notified when we launch! 🎉");
+  };
   return (
     <div className="bg-rose-200! my-5">
       <MyContainer className={""}>
@@ -32,7 +35,11 @@ const UpComing = () => {
               {user ? (
                 <button className="btn gradient mt-4 w-full">Notify Me</button>
               ) : (
-                <Link to={"/login"} className="btn gradient mt-4 w-full">
+                <Link
+                  to={"/login"}
+                  onClick={handleToast}
+                  className="btn gradient mt-4 w-full"
+                >
                   Notify Me
                 </Link>
               )}
@@ -55,7 +62,11 @@ const UpComing = () => {
               {user ? (
                 <button className="btn gradient mt-4 w-full">Notify Me</button>
               ) : (
-                <Link to={"/login"} className="btn gradient mt-4 w-full">
+                <Link
+                  to={"/login"}
+                  onClick={handleToast}
+                  className="btn gradient mt-4 w-full"
+                >
                   Notify Me
                 </Link>
               )}
@@ -77,7 +88,11 @@ const UpComing = () => {
               {user ? (
                 <button className="btn gradient mt-4 w-full">Notify Me</button>
               ) : (
-                <Link to={"/login"} className="btn gradient mt-4 w-full">
+                <Link
+                  to={"/login"}
+                  onClick={handleToast}
+                  className="btn gradient mt-4 w-full"
+                >
                   Notify Me
                 </Link>
               )}
@@ -99,7 +114,11 @@ const UpComing = () => {
               {user ? (
                 <button className="btn gradient mt-4 w-full">Notify Me</button>
               ) : (
-                <Link to={"/login"} className="btn gradient mt-4 w-full">
+                <Link
+                  to={"/login"}
+                  onClick={handleToast}
+                  className="btn gradient mt-4 w-full"
+                >
                   Notify Me
                 </Link>
               )}
