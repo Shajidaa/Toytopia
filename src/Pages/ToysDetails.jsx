@@ -4,6 +4,7 @@ import { FaArrowLeft, FaCheckCircle, FaStar } from "react-icons/fa";
 import { toast } from "react-toastify";
 import Rating from "../Components/Rating";
 import Spinner from "../Components/Spinner/Spinner";
+import MyContainer from "../MyContainer/MyContainer";
 
 const ToysDetails = () => {
   const { id } = useParams();
@@ -39,7 +40,7 @@ const ToysDetails = () => {
     return toast.success(`Thanks ${name}, Received your request!🎉`);
   };
   return (
-    <div className="max-w-7xl mx-auto p-6">
+    <MyContainer className=" p-6">
       <title>{toyName}</title>
       <div className="card bg-white  p-2 shadow-xl ">
         <Link
@@ -160,7 +161,7 @@ const ToysDetails = () => {
           <Rating></Rating>
         </div>
       </div>
-    </div>
+    </MyContainer>
   );
 };
 

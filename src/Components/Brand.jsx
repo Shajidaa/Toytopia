@@ -14,7 +14,7 @@ const Brand = () => {
       </h1>
       <div className="gradientBtn my-5 md:my-10 ">
         <Marquee autoFill={true}>
-          <div className="flex  p-4 gap-5  ">{brand}</div>
+          <div className="flex  p-4 gap-5">{brand}</div>
         </Marquee>
       </div>
     </div>

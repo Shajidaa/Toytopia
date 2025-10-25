@@ -14,7 +14,7 @@ const Popular = () => {
   return (
     <MyContainer className={"py-5 "}>
       <div className="flex justify-between items-center ">
-        <h1 className=" py-3 text-3xl font-bold text-[#333333]">
+        <h1 className=" py-3 md:py-6 text-3xl font-bold text-[#333333]">
           Popular Toys
         </h1>
         <Link
@@ -42,7 +42,9 @@ const Popular = () => {
                 alt={toy.toyName}
               />
             </div>
-            <h2 className="text-lg font-semibold ">{toy.toyName}</h2>
+            <h2 className="md:text-lg text-base font-bold pt-2 ">
+              {toy.toyName}
+            </h2>
             <p className="font-semibold text-[#555555] ">Price:${toy.price}</p>
             <div className="flex justify-between">
               <p className="text-gray-600 font-medium">

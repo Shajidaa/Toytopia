@@ -30,11 +30,13 @@ const Toys = () => {
              hover:-translate-y-1 transition"
           >
             <div className=" flex relative justify-center items-center">
-              <img
-                className="w-[295px]  h-[198px] rounded-xl object-contain"
-                src={toy.pictureURL}
-                alt={toy.toyName}
-              />
+              <div className=" h-[198px]">
+                <img
+                  className="w-full h-full rounded-xl object-contain"
+                  src={toy.pictureURL}
+                  alt={toy.toyName}
+                />
+              </div>
               <div className="absolute top-0 right-0">
                 {toy.isPopular && (
                   <span className="badge border-2 border-dotted badge-sm bg-[#f10a0a] font-semibold  text-nowrap text-white">
@@ -43,7 +45,9 @@ const Toys = () => {
                 )}
               </div>
             </div>
-            <h2 className="text-lg font-semibold ">{toy.toyName}</h2>
+            <h2 className="md:text-lg text-base font-bold pt-2 ">
+              {toy.toyName}
+            </h2>
             <p className="font-semibold text-[#555555] ">Price:${toy.price}</p>
             <div className="flex justify-between">
               <p className="text-gray-600 font-medium">

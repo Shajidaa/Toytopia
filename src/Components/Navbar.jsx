@@ -66,7 +66,7 @@ const Navbar = () => {
                 <Link
                   onClick={handleLogOut}
                   to={"login"}
-                  className="btn gradient"
+                  className="btn  btn-sm md:btn-md gradient"
                 >
                   Log Out
                 </Link>
@@ -74,7 +74,7 @@ const Navbar = () => {
             ) : (
               <div className="flex justify-center items-center gap-2">
                 <TbUser className="md:size-8 size-5" />
-                <Link to={"login"} className="btn gradient">
+                <Link to={"login"} className="btn  btn-sm md:btn-md gradient">
                   Login
                 </Link>
               </div>

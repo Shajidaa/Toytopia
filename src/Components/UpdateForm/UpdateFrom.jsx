@@ -56,11 +56,11 @@ const UpdateFrom = () => {
           <button
             type="button"
             onClick={handleToggle}
-            className="flex justify-between w-full p-5 font-medium text-blue-500  relative gap-3"
+            className="flex justify-between w-full  font-medium text-blue-500  relative gap-3"
           >
-            <span className="text-lg">Update your Profile?</span>
+            <span className="text-lg text-start">Update your Profile?</span>
             <svg
-              className={`w-4 h-4 transition-transform absolute top-6.5 right-0 duration-300 ${
+              className={`w-4 h-4 transition-transform absolute top-2 right-0 duration-300 ${
                 open ? "rotate-0" : "rotate-180"
               }`}
               aria-hidden="true"
