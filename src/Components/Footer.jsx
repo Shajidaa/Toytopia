@@ -57,6 +57,7 @@ const Footer = () => {
             <ul className="space-y-1">
               <li>
                 <a
+                  href="#"
                   className="hover:underline cursor-pointer"
                   rel="noopener noreferrer"
                 >
@@ -65,6 +66,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
+                  href="#"
                   className="hover:underline cursor-pointer"
                   rel="noopener noreferrer"
                 >
@@ -73,6 +75,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
+                  href="#"
                   className="hover:underline cursor-pointer"
                   rel="noopener noreferrer"
                 >
