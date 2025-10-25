@@ -47,36 +47,41 @@ const Footer = () => {
             </ul>
           </div>
           <div className="space-y-3">
-            <h3 className="tracking-wide uppercase ">Company</h3>
+            <h3 className="tracking-wide uppercase ">Services</h3>
             <ul className="space-y-1">
               <li>
                 <a rel="noopener noreferrer" href="#">
-                  Privacy
+                  Design
                 </a>
               </li>
               <li>
                 <a rel="noopener noreferrer" href="#">
-                  Terms of Service
+                  Marketing
+                </a>
+              </li>
+              <li>
+                <a rel="noopener noreferrer" href="#">
+                  Advertisement
                 </a>
               </li>
             </ul>
           </div>
           <div className="space-y-3">
-            <h3 className="uppercase ">Developers</h3>
+            <h3 className="uppercase ">Legal</h3>
             <ul className="space-y-1">
               <li>
                 <a rel="noopener noreferrer" href="#">
-                  Public API
+                  Terms & Conditions
                 </a>
               </li>
               <li>
                 <a rel="noopener noreferrer" href="#">
-                  Documentation
+                  Privacy Policy
                 </a>
               </li>
               <li>
                 <a rel="noopener noreferrer" href="#">
-                  Guides
+                  Cookie Policy
                 </a>
               </li>
             </ul>
@@ -111,8 +116,8 @@ const Footer = () => {
         <hr />
       </MyContainer>
       <hr className="hidden lg:flex" />
-      <div className="py-6 text-sm text-center ">
-        © 2025 Company Co. All rights reserved.
+      <div className="md:py-3 py-0 md:pb-2 pb-15 text-sm text-center ">
+        © All rights reserved by ToyTopia
       </div>
     </footer>
   );

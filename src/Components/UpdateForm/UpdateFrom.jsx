@@ -3,18 +3,22 @@ import { AuthContext } from "../../Provider/AuthContext";
 import { toast } from "react-toastify";
 
 const UpdateFrom = () => {
-  const { user, setUser, updateProfileFunc, loading, setLoading } =
+  const { user, setUser, updateProfileFunc, setLoading } =
     useContext(AuthContext);
   const [open, setOpen] = useState(false);
+  const [btnLoading, setBtnLoading] = useState(false);
+
   const handleToggle = () => {
     setOpen(!open);
   };
+
   const handleUpdate = async (e) => {
     e.preventDefault();
     const from = e.target;
     const displayName = from.name.value;
     const photoURL = from.photo.value;
     setLoading(false);
+    setBtnLoading(true);
     try {
       if (displayName && !photoURL) {
         await updateProfileFunc({ ...user, displayName });
@@ -34,12 +38,17 @@ const UpdateFrom = () => {
       }
       from.reset();
     } catch (err) {
-      // console.log(err.message);
-      toast.error("Failed to update Profile .Please Try again");
+      let message = "Failed to update Profile .Please Try again";
+      if (err) {
+        toast.error(message);
+      }
     } finally {
       setLoading(false);
+      setBtnLoading(false);
     }
   };
+  console.log(btnLoading);
+
   return (
     <div>
       <div id="accordion-collapse" data-accordion="collapse">
@@ -101,20 +110,21 @@ const UpdateFrom = () => {
                 />
                 <br />
                 <p className="font-medium text-red-500">
-                  Don't want to leave blank.
+                  Leave blank if you don't want to update.
                 </p>
                 <button
                   type="submit"
                   className="btn bg-linear-to-r from-[#e69d95] to-blue-500  hover:from-[#ec958b] hover:to-blue-800  text-white  "
-                  disabled={loading}
+                  disabled={btnLoading}
                 >
-                  {loading ? (
+                  {btnLoading ? (
                     <>
+                      {" "}
                       <span className="loading loading-spinner"></span>
                       Updating{" "}
                     </>
                   ) : (
-                    <>Update </>
+                    <>Update</>
                   )}
                 </button>
               </fieldset>

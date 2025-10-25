@@ -9,8 +9,10 @@ import { TbLogout2 } from "react-icons/tb";
 const Forget = () => {
   const { loading } = useToys();
   const { forgetPassword } = useContext(AuthContext);
+
   const navigate = useNavigate();
   const location = useLocation();
+
   const email = location.state?.email || "";
   if (loading) {
     return <Spinner></Spinner>;
@@ -18,11 +20,12 @@ const Forget = () => {
 
   const handleReset = async (e) => {
     e.preventDefault();
-    const emailValue = e.target.email.value;
+    const emailValue = e.target.email.value.trim().toLowerCase();
     try {
-      await forgetPassword(emailValue);
-      window.open("https://mail.google.com", "_blank");
       toast.success("Password reset email sent");
+      await forgetPassword(emailValue);
+
+      window.open("https://mail.google.com", "_blank");
 
       navigate("/login");
     } catch (error) {
@@ -41,12 +44,15 @@ const Forget = () => {
   };
 
   return (
-    <div className="flex justify-center items-center  py-2  min-h-screen">
+    <div className="flex justify-center items-center px-5   py-2  min-h-screen">
       <title> Forget Password Page </title>
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
         <div className="card-body">
           <form onSubmit={handleReset}>
             <fieldset className="fieldset">
+              <h1 className="text-center text-xl font-semibold text-[#333333]">
+                Reset Password
+              </h1>
               <label className="label">Email</label>
               <input
                 type="email"
@@ -55,7 +61,9 @@ const Forget = () => {
                 defaultValue={email}
               />
 
-              <button className="btn btn-neutral mt-4">Reset</button>
+              <button className="btn bg-linear-to-r from-[#e69d95] to-blue-500  hover:from-[#ec958b] hover:to-blue-800  text-white   mt-4">
+                Reset
+              </button>
             </fieldset>
             <br />
 

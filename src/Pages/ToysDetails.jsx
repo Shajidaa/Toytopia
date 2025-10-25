@@ -33,7 +33,7 @@ const ToysDetails = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const name = e.target.name.value;
+    const name = e.target.name.value.trim();
     const email = e.target.email.value;
     e.target.reset();
     return toast.success(`Thanks ${name}, Received your request!🎉`);
@@ -43,7 +43,7 @@ const ToysDetails = () => {
       <title>{toyName}</title>
       <div className="card   p-2  shadow-xl ">
         <Link
-          to="/"
+          to="/toys"
           className=" underline mb-4 flex items-center gap-2  border-primary text-blue-600 hover:text-blue-"
         >
           <FaArrowLeft /> Back to Toys

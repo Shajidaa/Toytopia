@@ -36,9 +36,9 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const from = e.target;
-    const displayName = from.name.value;
-    const photoURL = from.photo.value;
-    const email = from.email.value;
+    const displayName = from.name.value.trim();
+    const photoURL = from.photo.value.trim();
+    const email = from.email.value.trim().toLowerCase();
     const password = from.password.value;
 
     const regExp = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
@@ -62,6 +62,8 @@ const Register = () => {
 
       if (err.code === "auth/popup-closed-by-user") {
         message = "Login was cancelled. Please try again.";
+      } else if (err.code === "auth/email-already-in-use") {
+        message = "The email is already register.";
       } else if (err.code === "auth/network-request-failed") {
         message =
           "Network issue detected. Check your internet connection and retry.";
@@ -84,6 +86,9 @@ const Register = () => {
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
         <div className="card-body">
           <form onSubmit={handleSubmit}>
+            <h1 className="text-center text-xl font-semibold text-[#333333]">
+              Create your account
+            </h1>
             <fieldset className="fieldset">
               {/* Name  */}
               <label className="label text-gray-900 text-base">Name</label>
@@ -189,7 +194,7 @@ const Register = () => {
                 ></path>
               </g>
             </svg>
-            Login with Google
+            Register with Google
           </button>
         </div>
       </div>

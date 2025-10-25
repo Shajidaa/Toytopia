@@ -45,7 +45,7 @@ const Login = () => {
     e.preventDefault();
     const from = e.target;
 
-    const email = from.email.value;
+    const email = from.email.value.trim();
     const password = from.password.value;
     try {
       const res = await logIn(email, password);
@@ -75,12 +75,15 @@ const Login = () => {
   };
 
   return (
-    <MyContainer className="flex px-5  justify-center items-center  py-2 min-h-dvh ">
+    <MyContainer className="flex px-5  justify-center items-center  py-3 min-h-dvh ">
       <title> Login page</title>
-      <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+      <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl ">
         <div className="card-body">
           <form onSubmit={handleLogIn}>
             <fieldset className="fieldset">
+              <h1 className="text-center text-xl font-semibold text-[#333333]">
+                Login your account
+              </h1>
               <label className="label text-gray-900 text-base">Email</label>
               <input
                 type="email"

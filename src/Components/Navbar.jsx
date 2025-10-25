@@ -3,6 +3,7 @@ import MyContainer from "../MyContainer/MyContainer";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthContext";
 import { TbUser } from "react-icons/tb";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -10,6 +11,7 @@ const Navbar = () => {
   const handleLogOut = () => {
     logOut();
     navigate("/");
+    toast.success("Logout successfully!");
   };
   const links = (
     <>
