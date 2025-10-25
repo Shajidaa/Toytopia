@@ -15,7 +15,7 @@ const Profile = () => {
     <div className="">
       <MyContainer className="flex justify-center px-5 items-center min-h-dvh">
         <title> Profile </title>
-        <div className=" p-6 shadow-md rounded-xl  border border-[#e57368] sm:px-12">
+        <div className=" p-6 bg-base-100 shadow-md rounded-xl  sm:px-12">
           <div className="flex md:flex-row flex-col justify-between gap-3.5  items-center ">
             <img
               src={user.photoURL}
@@ -26,7 +26,7 @@ const Profile = () => {
             <div className="relative">
               <h2>
                 {" "}
-                <span className="text-xl font-semibold text-blue-500">
+                <span className="text-xl font-semibold text-[#444444]">
                   Name:{" "}
                 </span>
                 <span className="text-lg font-medium text-[#333333]">
@@ -35,7 +35,7 @@ const Profile = () => {
               </h2>
               <br />
               <h2 className="text-lg font-medium text-[#333333]">
-                <span className="text-xl font-semibold text-blue-500">
+                <span className="text-xl font-semibold text-[#444444]">
                   Email:
                 </span>
                 {user.email}

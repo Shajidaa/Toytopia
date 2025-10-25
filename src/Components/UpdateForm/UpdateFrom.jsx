@@ -85,7 +85,7 @@ const UpdateFrom = () => {
                 <input
                   type="text"
                   name="name"
-                  className="input"
+                  className="input placeholder:text-gray-500"
                   placeholder="Name"
                 />
                 <br />
@@ -100,6 +100,9 @@ const UpdateFrom = () => {
                   placeholder="https://exampleimage.com"
                 />
                 <br />
+                <p className="font-medium text-red-500">
+                  Don't want to leave blank.
+                </p>
                 <button
                   type="submit"
                   className="btn bg-linear-to-r from-[#e69d95] to-blue-500  hover:from-[#ec958b] hover:to-blue-800  text-white  "
