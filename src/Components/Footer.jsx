@@ -25,24 +25,16 @@ const Footer = () => {
             <h3 className="tracking-wide uppercase">Product</h3>
             <ul className="space-y-1">
               <li>
-                <a rel="noopener noreferrer" href="#">
-                  Features
-                </a>
+                <a rel="noopener noreferrer">Features</a>
               </li>
               <li>
-                <a rel="noopener noreferrer" href="#">
-                  Integrations
-                </a>
+                <a rel="noopener noreferrer">Integrations</a>
               </li>
               <li>
-                <a rel="noopener noreferrer" href="#">
-                  Pricing
-                </a>
+                <a rel="noopener noreferrer">Pricing</a>
               </li>
               <li>
-                <a rel="noopener noreferrer" href="#">
-                  FAQ
-                </a>
+                <a rel="noopener noreferrer">FAQ</a>
               </li>
             </ul>
           </div>
@@ -50,19 +42,13 @@ const Footer = () => {
             <h3 className="tracking-wide uppercase ">Services</h3>
             <ul className="space-y-1">
               <li>
-                <a rel="noopener noreferrer" href="#">
-                  Design
-                </a>
+                <a rel="noopener noreferrer">Design</a>
               </li>
               <li>
-                <a rel="noopener noreferrer" href="#">
-                  Marketing
-                </a>
+                <a rel="noopener noreferrer">Marketing</a>
               </li>
               <li>
-                <a rel="noopener noreferrer" href="#">
-                  Advertisement
-                </a>
+                <a rel="noopener noreferrer">Advertisement</a>
               </li>
             </ul>
           </div>
@@ -70,17 +56,26 @@ const Footer = () => {
             <h3 className="uppercase ">Legal</h3>
             <ul className="space-y-1">
               <li>
-                <a rel="noopener noreferrer" href="#">
+                <a
+                  className="hover:underline cursor-pointer"
+                  rel="noopener noreferrer"
+                >
                   Terms & Conditions
                 </a>
               </li>
               <li>
-                <a rel="noopener noreferrer" href="#">
+                <a
+                  className="hover:underline cursor-pointer"
+                  rel="noopener noreferrer"
+                >
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a rel="noopener noreferrer" href="#">
+                <a
+                  className="hover:underline cursor-pointer"
+                  rel="noopener noreferrer"
+                >
                   Cookie Policy
                 </a>
               </li>

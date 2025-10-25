@@ -2,6 +2,7 @@ import Banner from "../Components/Banner/Banner";
 import Brand from "../Components/Brand";
 import Choose from "../Components/Choose";
 import Popular from "../Components/Popular/Popular";
+import UpComing from "../Components/UpComing.jsx/UpComing";
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       <title>Home| ToyTopia</title>
       <Banner></Banner>
       <Popular></Popular>
+      <UpComing></UpComing>
       <Brand></Brand>
       <Choose></Choose>
     </div>
