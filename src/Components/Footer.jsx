@@ -20,8 +20,8 @@ const Footer = () => {
           </p>
         </div>
         <hr className="lg:hidden" />
-        <div className="grid grid-cols-2  text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
-          <div className="space-y-3">
+        <div className="grid grid-cols-2  text-sm gap-x-5 gap-y-8 lg:w-2/3 sm:grid-cols-4">
+          <div className="space-y-5">
             <h3 className="tracking-wide uppercase">Product</h3>
             <ul className="space-y-1">
               <li>
@@ -38,7 +38,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="space-y-3">
+          <div className="space-y-5">
             <h3 className="tracking-wide uppercase ">Services</h3>
             <ul className="space-y-1">
               <li>
@@ -52,7 +52,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="space-y-3">
+          <div className="space-y-5 ">
             <h3 className="uppercase ">Legal</h3>
             <ul className="space-y-1">
               <li>
@@ -81,7 +81,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="space-y-3">
+          <div className="space-y-5 ">
             <div className="uppercase ">Social media</div>
             <div className="flex flex-col justify-start space-x-3">
               <a

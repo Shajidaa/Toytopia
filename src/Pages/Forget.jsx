@@ -21,6 +21,7 @@ const Forget = () => {
   const handleReset = async (e) => {
     e.preventDefault();
     const emailValue = e.target.email.value.trim().toLowerCase();
+
     try {
       toast.success("Password reset email sent");
       await forgetPassword(emailValue);
@@ -60,6 +61,7 @@ const Forget = () => {
                 placeholder="example@gmail.com"
                 name="email"
                 defaultValue={email}
+                required
               />
 
               <button className="btn gradient  mt-4">Reset</button>
