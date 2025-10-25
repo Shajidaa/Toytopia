@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="lg:w-1/4">
           <h1 className="self-center text-2xl font-semibold">ToyTopia</h1>
 
-          <p className="text-sm text-[#333333]  ">
+          <p className="text-sm text-[#333333] mt-3.5">
             Bringing joy and imagination to kids with fun, safe, and creative
             toys for all ages.
           </p>
