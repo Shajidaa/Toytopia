@@ -9,7 +9,7 @@ import MyContainer from "../../MyContainer/MyContainer";
 const Register = () => {
   const { signInWithGoogle, setUser, createUser, updateProfileFunc } =
     useContext(AuthContext);
-
+  const [btnLoading, setBtnLoading] = useState(false);
   const [show, setShow] = useState(false);
 
   const navigate = useNavigate();
@@ -48,7 +48,7 @@ const Register = () => {
       );
       return;
     }
-
+    setBtnLoading(true);
     try {
       const res = await createUser(email, password);
       const user = res.user;
@@ -72,6 +72,8 @@ const Register = () => {
           "This email is already linked to another login method. Try signing in differently.";
       }
       toast.error(message);
+    } finally {
+      setBtnLoading(false);
     }
   };
   const handleShowPassword = (e) => {
@@ -145,7 +147,15 @@ const Register = () => {
               </div>
               {/* button  */}
               <button type="submit" className="btn gradient mt-4">
-                Register
+                {btnLoading ? (
+                  <>
+                    {" "}
+                    <span className="loading loading-spinner"></span>
+                    Register{" "}
+                  </>
+                ) : (
+                  <> Register </>
+                )}
               </button>
             </fieldset>
           </form>

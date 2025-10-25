@@ -8,7 +8,7 @@ import MyContainer from "../../MyContainer/MyContainer";
 
 const Login = () => {
   const [show, setShow] = useState(null);
-
+  const [btnLoading, setBtnLoading] = useState(false);
   const { signInWithGoogle, setUser, logIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
@@ -47,6 +47,7 @@ const Login = () => {
 
     const email = from.email.value.trim();
     const password = from.password.value;
+    setBtnLoading(true);
     try {
       const res = await logIn(email, password);
       await setUser(res.user);
@@ -65,6 +66,8 @@ const Login = () => {
       }
 
       toast.error(message);
+    } finally {
+      setBtnLoading(false);
     }
   };
 
@@ -125,7 +128,17 @@ const Login = () => {
                   Forgot password?
                 </p>
               </div>
-              <button className="btn gradient  mt-4">Login</button>
+              <button className="btn gradient  mt-4">
+                {btnLoading ? (
+                  <>
+                    {" "}
+                    <span className="loading loading-spinner"></span>
+                    Login{" "}
+                  </>
+                ) : (
+                  <> Login </>
+                )}
+              </button>
             </fieldset>
           </form>
           <p>
