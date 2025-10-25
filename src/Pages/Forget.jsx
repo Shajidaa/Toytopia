@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import useToys from "../Hooks/Hook";
 import Spinner from "../Components/Spinner/Spinner";
 import { Link, useLocation, useNavigate } from "react-router";
-import { TbLogout2 } from "react-icons/tb";
+import { TbLogin2, TbLogout2 } from "react-icons/tb";
 
 const Forget = () => {
   const { loading } = useToys();
@@ -56,7 +56,8 @@ const Forget = () => {
               <label className="label">Email</label>
               <input
                 type="email"
-                className="input"
+                className="input placeholder:text-gray-400"
+                placeholder="example@gmail.com"
                 name="email"
                 defaultValue={email}
               />
@@ -71,7 +72,7 @@ const Forget = () => {
               to={"/login"}
               className="hover:underline text-blue-500 hover:text-blue-800 text-md"
             >
-              <TbLogout2 className="inline" /> Login
+              <TbLogin2 className="inline" /> Login
             </Link>
           </form>
         </div>
