@@ -14,9 +14,9 @@
 
 -**Framework:** Tailwind Css
 
--**Library:** React , React Router ,Recharts,React-Toastify
+-**Library:** React , React Router
 
--**package:** Swiper,
+-**package:** Swiper,react-fast-marquee,react-icons,react-router,react-spinners,react-toastify
 
 Link :
 
