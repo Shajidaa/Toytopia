@@ -12,43 +12,43 @@ const Profile = () => {
   }
 
   return (
-    <div className="">
-      <MyContainer className="flex justify-center px-5 items-center min-h-dvh">
-        <title> Profile </title>
-        <div className=" p-6 bg-base-100 shadow-md rounded-xl  sm:px-12">
-          <div className="flex md:flex-row flex-col justify-between gap-3.5  items-center ">
-            <img
-              src={user.photoURL}
-              alt=""
-              className="w-32 h-32  border-rose-400 border-2 mx-auto rounded-full aspect-square"
-            />
-            <div className="divider divider-horizontal "></div>
-            <div className="relative">
-              <h2>
-                {" "}
-                <span className="text-xl font-semibold text-[#444444]">
-                  Name:{" "}
-                </span>
-                <span className="text-lg font-medium text-[#333333]">
-                  {user.displayName}{" "}
-                </span>
-              </h2>
-              <br />
-              <h2 className="text-lg font-medium text-[#333333]">
-                <span className="text-xl font-semibold text-[#444444]">
-                  Email:
-                </span>
+    <MyContainer className="flex py-5 justify-center px-5 items-center min-h-dvh">
+      <title> Profile </title>
+      <div className="md:p-6 bg-base-100 shadow-md rounded-xl ">
+        <div className="flex p-4 md:flex-row flex-col justify-between gap-3.5  items-center ">
+          <img
+            src={user.photoURL}
+            alt=""
+            className="max-w-32 max-h-32  border-rose-400 border-2 mx-auto rounded-full aspect-square"
+          />
+          <div className="divider divider-horizontal "></div>
+          <div className="relative">
+            <h2 className="flex md:flex-row md:justify-start flex-col justify-center items-center">
+              {" "}
+              <span className="text-xl  font-semibold text-[#444444]">
+                Name:{" "}
+              </span>
+              <span className="md:text-lg  text-base font-medium  text-[#444444]">
+                {user.displayName}{" "}
+              </span>
+            </h2>
+            <br />
+            <h2 className="flex md:flex-row flex-col md:justify-start justify-center items-center">
+              <span className="text-xl  font-medium text-[#333333] ">
+                Email:
+              </span>
+              <span className="md:text-lg text-base font-semibold text-[#444444]">
                 {user.email}
-              </h2>
-              <br />
-              <div>
-                <UpdateFrom></UpdateFrom>
-              </div>
+              </span>
+            </h2>
+            <br />
+            <div>
+              <UpdateFrom></UpdateFrom>
             </div>
           </div>
         </div>
-      </MyContainer>
-    </div>
+      </div>
+    </MyContainer>
   );
 };
 
