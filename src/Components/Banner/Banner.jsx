@@ -49,6 +49,7 @@ const Banner = () => {
                   laughter, and endless adventures — all in one place!
                 </p>
                 <Link
+                  to={"/toys"}
                   className="btn  
                gradient"
                 >
