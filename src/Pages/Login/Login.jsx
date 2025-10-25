@@ -125,9 +125,7 @@ const Login = () => {
                   Forgot password?
                 </p>
               </div>
-              <button className="btn bg-linear-to-r from-[#e69d95] to-blue-500  hover:from-[#ec958b] hover:to-blue-800  text-white  mt-4">
-                Login
-              </button>
+              <button className="btn gradient  mt-4">Login</button>
             </fieldset>
           </form>
           <p>

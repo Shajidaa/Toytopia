@@ -55,8 +55,7 @@ const Popular = () => {
 
             <Link
               to={`/toyDetails/${toy.toyId}`}
-              className="mt-2 btn font-bold rounded-2xl bg-linear-to-r from-[#e69d95] to-blue-500  hover:from-[#ec958b] hover:to-blue-800  text-white 
-             "
+              className="mt-2 btn gradient "
             >
               View More
             </Link>

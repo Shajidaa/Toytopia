@@ -144,10 +144,7 @@ const Register = () => {
                 </span>
               </div>
               {/* button  */}
-              <button
-                type="submit"
-                className="btn bg-linear-to-r from-[#e69d95] to-blue-500  hover:from-[#ec958b] hover:to-blue-800  text-white  mt-4"
-              >
+              <button type="submit" className="btn gradient mt-4">
                 Register
               </button>
             </fieldset>

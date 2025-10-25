@@ -62,9 +62,7 @@ const Forget = () => {
                 defaultValue={email}
               />
 
-              <button className="btn bg-linear-to-r from-[#e69d95] to-blue-500  hover:from-[#ec958b] hover:to-blue-800  text-white   mt-4">
-                Reset
-              </button>
+              <button className="btn gradient  mt-4">Reset</button>
             </fieldset>
             <br />
 

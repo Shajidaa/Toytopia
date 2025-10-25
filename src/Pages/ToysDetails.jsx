@@ -41,7 +41,7 @@ const ToysDetails = () => {
   return (
     <div className="max-w-7xl mx-auto p-6">
       <title>{toyName}</title>
-      <div className="card   p-2 shadow-xl ">
+      <div className="card bg-white  p-2 shadow-xl ">
         <Link
           to="/toys"
           className=" underline mb-4 flex items-center gap-2  border-primary text-blue-600 hover:text-blue-"
@@ -144,10 +144,7 @@ const ToysDetails = () => {
                 />
               </legend>
               <br />
-              <button
-                type="submit"
-                className="btn bg-linear-to-r from-[#e69d95] to-blue-500  hover:from-[#ec958b] hover:to-blue-800  text-white   w-full "
-              >
+              <button type="submit" className="btn gradient  w-full ">
                 Try now{" "}
               </button>
             </form>

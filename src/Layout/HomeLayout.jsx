@@ -27,7 +27,7 @@ const HomeLayout = () => {
     <>
       <Navbar></Navbar>
 
-      <main className="bg-[#fff8f7]">
+      <main className="bg-[#FFF6EC]">
         <Outlet></Outlet>
       </main>
 

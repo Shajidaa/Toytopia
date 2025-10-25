@@ -31,7 +31,7 @@ const Navbar = () => {
   );
   return (
     <>
-      <div className={`bg-[#fff8f7]! shadow-sm sticky top-0 z-50`}>
+      <div className={`bg-[#f3efef] shadow-sm sticky top-0 z-50`}>
         <MyContainer className="navbar">
           <div className="navbar-start">
             <div className="lg:h-22 h-15">
@@ -66,7 +66,7 @@ const Navbar = () => {
                 <Link
                   onClick={handleLogOut}
                   to={"login"}
-                  className="btn bg-linear-to-r  from-[#e69d95] to-blue-500  hover:from-[#ec958b] hover:to-blue-800  text-white "
+                  className="btn gradient"
                 >
                   Log Out
                 </Link>
@@ -74,10 +74,7 @@ const Navbar = () => {
             ) : (
               <div className="flex justify-center items-center gap-2">
                 <TbUser className="md:size-8 size-5" />
-                <Link
-                  to={"login"}
-                  className="btn bg-linear-to-r from-[#e69d95] to-blue-500  hover:from-[#ec958b] hover:to-blue-800  text-white "
-                >
+                <Link to={"login"} className="btn gradient">
                   Login
                 </Link>
               </div>

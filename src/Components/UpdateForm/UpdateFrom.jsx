@@ -114,7 +114,7 @@ const UpdateFrom = () => {
                 </p>
                 <button
                   type="submit"
-                  className="btn bg-linear-to-r from-[#e69d95] to-blue-500  hover:from-[#ec958b] hover:to-blue-800  text-white  "
+                  className="btn gradient "
                   disabled={btnLoading}
                 >
                   {btnLoading ? (

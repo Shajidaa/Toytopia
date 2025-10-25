@@ -16,17 +16,6 @@
   --color-accent: #e57368;
 }
 
-.gradient {
-  background-image: linear-gradient(to right, #c76765, #d07a78, #d88e8c, #e0a19f, #e7b4b3);
-}
-
-.gradientBtn {
-  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
-}
-
-.gradientBg {
-  background-image: linear-gradient(to left bottom, #e57368, #e67e73, #e6887e, #e6938a, #e69d95, #ea9b99, #ee999d, #f197a2, #f689a8, #f77bb4, #f26fc5, #e568da);
-}
 
 .navLink {
   @apply ml-5 font-semibold lg:text-lg text-base text-primary border-b-3 border-transparent
@@ -38,4 +27,22 @@
 
 .navLink:hover {
   @apply text-[#dc7977] border-b-3 border-b-[#dc7977]
+}
+
+/* .gradient {
+  background-image: linear-gradient(to right, #c76765, #d07a78, #d88e8c, #e0a19f, #e7b4b3);
+} */
+
+.gradientBtn {
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+
+
+
+.gradientBg {
+  background-image: linear-gradient(to left bottom, #e57368, #e67e73, #e6887e, #e6938a, #e69d95, #ea9b99, #ee999d, #f197a2, #f689a8, #f77bb4, #f26fc5, #e568da);
+}
+
+.gradient {
+  @apply bg-linear-to-r from-[#f3afaf] via-[#F39F9F] to-[#c76765] text-white px-6 py-2 rounded-lg transition-all duration-500 hover:from-[#bd6462] hover:via-[#ec9292] hover:to-[#fababa]
 }
