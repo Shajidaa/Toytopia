@@ -30,13 +30,13 @@
 }
 
 .navLink {
-  @apply ml-5 font-semibold lg:text-lg text-base text-primary
+  @apply ml-5 font-semibold lg:text-lg text-base text-primary border-b-3 border-transparent
 }
 
 .navLink.active {
-  @apply text-[#dc7977] border-b-3
+  @apply text-[#dc7977] border-b-3 border-b-[#dc7977]
 }
 
 .navLink:hover {
-  @apply text-[#dc7977] border-b-3
+  @apply text-[#dc7977] border-b-3 border-b-[#dc7977]
 }

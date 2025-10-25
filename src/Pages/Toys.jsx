@@ -24,12 +24,19 @@ const Toys = () => {
             hover:shadow-lg 
              hover:-translate-y-1 transition"
           >
-            <div className=" flex justify-center items-center">
+            <div className=" flex relative justify-center items-center">
               <img
-                className="w-[295px] h-[198px] rounded-xl object-contain"
+                className="w-[295px]  h-[198px] rounded-xl object-contain"
                 src={toy.pictureURL}
                 alt={toy.toyName}
               />
+              <div className="absolute top-0 right-0">
+                {toy.isPopular && (
+                  <span className="badge border-2 border-dotted badge-sm bg-[#f10a0a] font-semibold  text-nowrap text-white">
+                    Popular
+                  </span>
+                )}
+              </div>
             </div>
             <h2 className="text-lg font-semibold ">{toy.toyName}</h2>
             <p className="font-semibold text-[#555555] ">Price:${toy.price}</p>

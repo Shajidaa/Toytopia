@@ -27,6 +27,7 @@ const ToysDetails = () => {
     subCategory,
     category,
     isPopular,
+    inStock,
     brandName,
   } = singleToys;
 
@@ -43,7 +44,7 @@ const ToysDetails = () => {
       <div className="card   p-2  shadow-xl ">
         <Link
           to="/"
-          className=" underline mb-4 flex items-center gap-2  border-primary text-blue-600 hover:text-accent "
+          className=" underline mb-4 flex items-center gap-2  border-primary text-blue-600 hover:text-blue-800"
         >
           <FaArrowLeft /> Back to Toys
         </Link>
@@ -61,9 +62,9 @@ const ToysDetails = () => {
            md:flex-row flex-col text-primary text-nowrap  font-semibold md:font-bold"
           >
             {toyName}
-            {isPopular && (
+            {inStock && (
               <div className="badge bg-linear-to-r from-[#e568da] to-[#e69d95]    text-nowrap text-white border-none ml-2">
-                🔥 Popular
+                Available
               </div>
             )}
           </h2>
@@ -89,6 +90,11 @@ const ToysDetails = () => {
               <span className="font-semibold text-primary">Category:</span>{" "}
               {category} / {subCategory}
             </p>
+            <p>
+              <span className="font-semibold text-primary">Type:</span>{" "}
+              {isPopular ? "Best Seller" : "Great Choice"}
+            </p>
+
             <p>
               <span className="font-semibold text-primary">
                 Available Quantity:
