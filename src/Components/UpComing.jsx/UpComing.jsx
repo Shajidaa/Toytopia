@@ -33,13 +33,14 @@ const UpComing = () => {
             <div className="card-body">
               <h2 className="card-title mx-auto">Pink Bunny</h2>
               {user ? (
-                <button className="btn gradient mt-4 w-full">Notify Me</button>
-              ) : (
-                <Link
-                  to={"/login"}
+                <button
                   onClick={handleToast}
                   className="btn gradient mt-4 w-full"
                 >
+                  Notify Me
+                </button>
+              ) : (
+                <Link to={"/login"} className="btn gradient mt-4 w-full">
                   Notify Me
                 </Link>
               )}
@@ -60,13 +61,14 @@ const UpComing = () => {
             <div className="card-body">
               <h2 className="card-title text-center mx-auto">Blue Elephant </h2>
               {user ? (
-                <button className="btn gradient mt-4 w-full">Notify Me</button>
-              ) : (
-                <Link
-                  to={"/login"}
+                <button
                   onClick={handleToast}
                   className="btn gradient mt-4 w-full"
                 >
+                  Notify Me
+                </button>
+              ) : (
+                <Link to={"/login"} className="btn gradient mt-4 w-full">
                   Notify Me
                 </Link>
               )}
@@ -86,13 +88,14 @@ const UpComing = () => {
             <div className="card-body">
               <h2 className="card-title text-center mx-auto">Octopus </h2>
               {user ? (
-                <button className="btn gradient mt-4 w-full">Notify Me</button>
-              ) : (
-                <Link
-                  to={"/login"}
+                <button
                   onClick={handleToast}
                   className="btn gradient mt-4 w-full"
                 >
+                  Notify Me
+                </button>
+              ) : (
+                <Link to={"/login"} className="btn gradient mt-4 w-full">
                   Notify Me
                 </Link>
               )}
@@ -112,13 +115,14 @@ const UpComing = () => {
             <div className="card-body">
               <h2 className="card-title text-center mx-auto">Frog</h2>
               {user ? (
-                <button className="btn gradient mt-4 w-full">Notify Me</button>
-              ) : (
-                <Link
-                  to={"/login"}
+                <button
                   onClick={handleToast}
                   className="btn gradient mt-4 w-full"
                 >
+                  Notify Me
+                </button>
+              ) : (
+                <Link to={"/login"} className="btn gradient mt-4 w-full">
                   Notify Me
                 </Link>
               )}
