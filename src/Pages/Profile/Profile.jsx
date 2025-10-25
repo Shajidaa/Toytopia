@@ -18,7 +18,7 @@ const Profile = () => {
         <div className="flex p-4 md:flex-row flex-col justify-between gap-3.5  items-center ">
           <img
             src={user.photoURL}
-            alt=""
+            alt={user.displayName}
             className="max-w-32 max-h-32  border-rose-400 border-2 mx-auto rounded-full aspect-square"
           />
           <div className="divider divider-horizontal "></div>
