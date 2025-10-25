@@ -5,7 +5,7 @@ const Offers = () => {
   return (
     <MyContainer>
       <title>Offers</title>
-      <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10 mb-10 pt-10">
+      <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10 py-10 pt-10">
         <div
           className="card bg-base-100  shadow-sm hover:shadow-lg
              hover:-translate-y-1 transition"
@@ -21,9 +21,9 @@ const Offers = () => {
               <Link
                 to={"/toys"}
                 className="btn hover:transform hover:scale-105
-               btn-info"
+               gradient"
               >
-                Explore➡
+                Explore ➡
               </Link>
             </div>
           </div>
@@ -32,7 +32,7 @@ const Offers = () => {
           className="card bg-base-100  shadow-sm hover:shadow-lg
              hover:-translate-y-1 transition"
         >
-          <div className="card-body   ">
+          <div className="card-body">
             <h2 className="card-title">🧸 Buy 2 Get 1 Free</h2>
             <p>
               More toys, more smiles! Pick any two toys and get the third one
@@ -42,9 +42,9 @@ const Offers = () => {
               <Link
                 to={"/toys"}
                 className="btn hover:transform hover:scale-105
-               btn-info"
+               gradient"
               >
-                Explore➡
+                Explore ➡
               </Link>
             </div>
           </div>
@@ -63,9 +63,9 @@ const Offers = () => {
               <Link
                 to={"/toys"}
                 className="btn hover:transform hover:scale-105
-               btn-info"
+               gradient"
               >
-                Explore➡
+                Explore ➡
               </Link>
             </div>
           </div>
@@ -86,9 +86,9 @@ const Offers = () => {
               <Link
                 to={"/toys"}
                 className="btn hover:transform hover:scale-105
-               btn-info"
+               gradient"
               >
-                Explore➡
+                Explore ➡
               </Link>
             </div>
           </div>
@@ -107,9 +107,9 @@ const Offers = () => {
               <Link
                 to={"/toys"}
                 className="btn hover:transform hover:scale-105
-               btn-info"
+               gradient"
               >
-                Explore➡
+                Explore ➡
               </Link>
             </div>
           </div>
@@ -129,9 +129,9 @@ const Offers = () => {
               <Link
                 to={"/toys"}
                 className="btn hover:transform hover:scale-105
-               btn-info"
+               gradient"
               >
-                Explore➡
+                Explore ➡
               </Link>
             </div>
           </div>
@@ -150,9 +150,9 @@ const Offers = () => {
               <Link
                 to={"/toys"}
                 className="btn hover:transform hover:scale-105
-               btn-info"
+               gradient"
               >
-                Explore➡
+                Explore ➡
               </Link>
             </div>
           </div>
@@ -171,9 +171,9 @@ const Offers = () => {
               <Link
                 to={"/toys"}
                 className="btn hover:transform hover:scale-105
-               btn-info"
+               gradient"
               >
-                Explore➡
+                Explore ➡
               </Link>
             </div>
           </div>
@@ -192,9 +192,9 @@ const Offers = () => {
               <Link
                 to={"/toys"}
                 className="btn hover:transform hover:scale-105
-               btn-info"
+               gradient"
               >
-                Explore➡
+                Explore ➡
               </Link>
             </div>
           </div>

@@ -17,7 +17,7 @@ const Choose = () => {
             <img src={hand} alt="" className="rounded-xl w-10 h-10" />
           </figure>
           <div className="card-body items-center text-center">
-            <h2 className="card-title text-nowrap">
+            <h2 className="card-title text-warp">
               Carefully Curated Selection
             </h2>
             <p>
@@ -31,7 +31,7 @@ const Choose = () => {
             <img src={boy} alt="" className="rounded-xl w-10 h-10" />
           </figure>
           <div className="card-body items-center text-center">
-            <h2 className="card-title text-nowrap">Age-Based Navigation</h2>
+            <h2 className="card-title text-warp">Age-Based Navigation</h2>
             <p>
               Easily browse toys by age group, helping you find the perfect
               match for every child.
@@ -43,7 +43,7 @@ const Choose = () => {
             <img src={trust} alt="" className="rounded-xl w-10 h-10" />
           </figure>
           <div className="card-body items-center text-center">
-            <h2 className="card-title text-nowrap">Trusted Local Partners</h2>
+            <h2 className="card-title text-warp">Trusted Local Partners</h2>
             <p>
               We collaborate with reputable local and international brands to
               bring you quality toys that inspire joy and learning.
@@ -55,7 +55,7 @@ const Choose = () => {
             <img src={bus} alt="" className="rounded-xl w-10 h-10" />
           </figure>
           <div className="card-body items-center text-center">
-            <h2 className="card-title text-nowrap">Fast & Friendly Service</h2>
+            <h2 className="card-title text-warp">Fast & Friendly Service</h2>
             <p>
               Enjoy quick delivery and a customer support team that’s always
               ready to help.

@@ -29,9 +29,7 @@
   @apply text-[#dc7977] border-b-3 border-b-[#dc7977]
 }
 
-/* .gradient {
-  background-image: linear-gradient(to right, #c76765, #d07a78, #d88e8c, #e0a19f, #e7b4b3);
-} */
+
 
 .gradientBtn {
   background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
@@ -44,5 +42,5 @@
 }
 
 .gradient {
-  @apply bg-linear-to-r from-[#f3afaf] via-[#F39F9F] to-[#c76765] text-white px-6 py-2 rounded-lg transition-all duration-500 hover:from-[#bd6462] hover:via-[#ec9292] hover:to-[#fababa]
+  @apply bg-linear-to-r from-[#f5c2c2] to-[#ff6562] text-white px-6 py-2 rounded-lg hover:transition duration-500 hover:scale-105 hover:from-[#f3cece] hover:to-[#ff4e4b]
 }
