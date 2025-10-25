@@ -15,8 +15,8 @@ const UpdateFrom = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     const from = e.target;
-    const displayName = from.name.value;
-    const photoURL = from.photo.value;
+    const displayName = from.name.value.trim();
+    const photoURL = from.photo.value.trim();
     setLoading(false);
     setBtnLoading(true);
     try {

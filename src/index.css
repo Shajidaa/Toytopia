@@ -42,5 +42,5 @@
 }
 
 .gradient {
-  @apply bg-linear-to-r from-[#f5c2c2] to-[#ff6562] text-white px-6 py-2 rounded-lg hover:transition duration-500 hover:scale-105 hover:from-[#f3cece] hover:to-[#ff4e4b]
+  @apply border-0 bg-linear-to-r from-[#f5c2c2] to-[#ff6562] text-white px-6 py-2 rounded-lg hover:transition duration-500 hover:scale-105 hover:from-[#f3cece] hover:to-[#ff4e4b]
 }

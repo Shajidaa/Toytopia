@@ -2,26 +2,29 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
 import "@smastrom/react-rating/style.css";
-import { Outlet } from "react-router";
-import { useContext } from "react";
+import { Outlet, useLocation } from "react-router";
+import { useContext, useEffect, useRef, useState } from "react";
 import { AuthContext } from "../Provider/AuthContext";
 import Spinner from "../Components/Spinner/Spinner";
 
 const HomeLayout = () => {
   const { loading } = useContext(AuthContext);
 
-  // const location = useLocation();
-  // const [pathLoading, setPathLoading] = useState(false);
+  const location = useLocation();
+  const [pathLoading, setPathLoading] = useState(false);
+  const prevPath = useRef(location.pathname);
 
-  // useEffect(() => {
-  //   setPathLoading(true);
-  //   const timer = setTimeout(() => setPathLoading(false), 700);
-  //   return () => clearTimeout(timer);
-  // }, [location]);
+  useEffect(() => {
+    if (!loading && prevPath.current !== location.pathname) {
+      setPathLoading(true);
+      prevPath.current = location.pathname;
 
-  if (loading) {
-    return <Spinner></Spinner>;
-  }
+      const timer = setTimeout(() => setPathLoading(false), 300);
+      return () => clearTimeout(timer);
+    }
+  }, [location.pathname, loading]);
+
+  if (loading || pathLoading) return <Spinner />;
 
   return (
     <>
