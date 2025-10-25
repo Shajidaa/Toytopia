@@ -41,7 +41,7 @@ const ToysDetails = () => {
   return (
     <div className="max-w-7xl mx-auto p-6">
       <title>{toyName}</title>
-      <div className="card   p-2  shadow-xl ">
+      <div className="card   p-2 shadow-xl ">
         <Link
           to="/toys"
           className=" underline mb-4 flex items-center gap-2  border-primary text-blue-600 hover:text-blue-"
