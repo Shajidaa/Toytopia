@@ -5,12 +5,14 @@ import { ToastContainer } from "react-toastify";
 import { RouterProvider } from "react-router";
 import router from "./Routes/Router.jsx";
 import AuthProvider from "./Provider/AuthProvider.jsx";
+import ScrollToTop from "./Components/ScrollToTop.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>
       <RouterProvider router={router}></RouterProvider>
       <ToastContainer autoClose={1000} />
+      <ScrollToTop />
     </AuthProvider>
   </StrictMode>
 );
