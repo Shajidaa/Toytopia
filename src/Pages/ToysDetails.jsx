@@ -139,7 +139,8 @@ const ToysDetails = () => {
               <FaStar className="text-yellow-500" />
               <span>({rating})</span>
             </p>
-            <div className="flex gap-4">
+            <hr />
+            <div className="flex gap-5">
               <Detail
                 className="flex flex-col "
                 label="Brand"
@@ -152,6 +153,7 @@ const ToysDetails = () => {
                 value={dimensions}
               />
             </div>
+
             <Detail label="Category" value={`${category} / ${subCategory}`} />
             {/* ADD TO CART SECTION */}
             <div className="mt-6 flex md:flex-row flex-col items-center gap-5">

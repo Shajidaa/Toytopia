@@ -19,12 +19,12 @@ export default function About() {
 
       {/* About Section */}
       <div className="bg-white backdrop-blur-md p-10 rounded-3xl shadow-xl  mx-auto">
-        <p className="text-lg leading-relaxed">
-          At <span className="font-semibold text-[#dc7977]">Toytopia</span>, we
-          believe every child deserves a world filled with joy, creativity, and
-          endless adventure. Our collection is curated to bring sparkles of
-          happiness and learning to kids of all ages. Where imagination meets
-          fun! Discover the magical world crafted specially for kids. From
+        <p className="text-lg text-[#dc7977] leading-relaxed">
+          At <span className="font-semibold ">Toytopia</span>, we believe every
+          child deserves a world filled with joy, creativity, and endless
+          adventure. Our collection is curated to bring sparkles of happiness
+          and learning to kids of all ages. Where imagination meets fun!
+          Discover the magical world crafted specially for kids. From
           educational toys to pure fun, we focus on quality, safety, and
           delightful experiences.
         </p>
