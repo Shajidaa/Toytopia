@@ -21,6 +21,12 @@ const Navbar = () => {
       <NavLink to={"/toys"} className={"navLink"}>
         TOYS
       </NavLink>
+      <NavLink to={"/about"} className="navLink">
+        ABOUT
+      </NavLink>
+      <NavLink to={"/support"} className="navLink">
+        ABOUT
+      </NavLink>
       {user && (
         <>
           <NavLink to={"/profile"} className={"navLink"}>

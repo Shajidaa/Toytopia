@@ -12,6 +12,8 @@ import PrivateProvider from "../Provider/PrivateProvider";
 import Profile from "../Pages/Profile/Profile";
 import Register from "../Pages/Register/Register";
 import Offers from "../Pages/Offers/Offers";
+import About from "../Pages/About";
+import Support from "../Pages/Support";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,14 @@ const router = createBrowserRouter([
       {
         path: "/toys",
         element: <Toys></Toys>,
+      },
+      {
+        path: "/about",
+        element: <About></About>,
+      },
+      {
+        path: "/support",
+        element: <Support></Support>,
       },
 
       {
