@@ -21,12 +21,16 @@ const Navbar = () => {
       <NavLink to={"/toys"} className={"navLink"}>
         TOYS
       </NavLink>
-      <NavLink to={"/profile"} className={"navLink"}>
-        PROFILE
-      </NavLink>
-      <NavLink to={"/offers"} className={"navLink"}>
-        OFFERS
-      </NavLink>
+      {user && (
+        <>
+          <NavLink to={"/profile"} className={"navLink"}>
+            PROFILE
+          </NavLink>
+          <NavLink to={"/offers"} className={"navLink"}>
+            OFFERS
+          </NavLink>
+        </>
+      )}
     </>
   );
   return (
