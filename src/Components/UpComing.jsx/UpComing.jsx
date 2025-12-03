@@ -12,9 +12,9 @@ const UpComing = () => {
     return toast.success("You’ll be notified when we launch! 🎉");
   };
   return (
-    <div className="bg-rose-200! my-5">
+    <div className=" my-5">
       <MyContainer className={""}>
-        <h1 className=" py-10 md:text-4xl text-2xl  text-center font-bold text-rose-950">
+        <h1 className=" py-10 md:text-4xl text-2xl  text-center font-bold text-[#333333]">
           Coming Soon
         </h1>
         <MyCountDown></MyCountDown>

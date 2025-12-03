@@ -1,6 +1,15 @@
 import { Link, useParams } from "react-router";
 import useToys from "../Hooks/Hook";
-import { FaArrowLeft, FaCheckCircle, FaStar } from "react-icons/fa";
+import {
+  FaArrowLeft,
+  FaCheckCircle,
+  FaStar,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaBox,
+  FaTags,
+  FaFireAlt,
+} from "react-icons/fa";
 import { toast } from "react-toastify";
 import Rating from "../Components/Rating";
 import Spinner from "../Components/Spinner/Spinner";
@@ -11,16 +20,20 @@ const ToysDetails = () => {
   const { toys, loading } = useToys();
   const singleToys = toys.find((toy) => toy.toyId == id);
 
-  if (loading) {
-    return <Spinner></Spinner>;
-  }
+  if (loading) return <Spinner />;
+
+  if (!singleToys)
+    return <p className="text-center text-red-500">Toy not found.</p>;
 
   const {
     toyName,
-
     sellerName,
     sellerEmail,
+    sellerPhone,
+    sellerAddress,
+    shopVerified,
     price,
+    discount,
     rating,
     availableQuantity,
     description,
@@ -30,139 +43,216 @@ const ToysDetails = () => {
     isPopular,
     inStock,
     brandName,
+    ageGroup,
+    learningBenefits,
+    theme,
+    difficultyLevel,
+    ageRange,
+    dimensions,
+    weight,
+    material,
+    colorVariant,
+    itemsIncluded,
+    safetyWarnings,
+    stockStatus,
+    restockDate,
   } = singleToys;
+
+  const finalPrice = discount
+    ? (price - (price * discount) / 100).toFixed(2)
+    : price;
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const name = e.target.name.value.trim();
-    const email = e.target.email.value;
     e.target.reset();
-    return toast.success(`Thanks ${name}, Received your request!🎉`);
+    return toast.success(`Thanks ${name}, Received your request! 🎉`);
   };
+
   return (
-    <MyContainer className=" p-6">
+    <MyContainer className="p-6">
       <title>{toyName}</title>
-      <div className="card bg-white  p-2 shadow-xl ">
+
+      {/* CARD */}
+      <div className="card bg-white p-1 md:p-5 shadow-2xl rounded-2xl border border-gray-200">
         <Link
           to="/toys"
-          className=" underline mb-4 flex items-center gap-2  border-primary text-blue-600 hover:text-blue-"
+          className="underline mb-4 flex items-center gap-2 text-[#dc7977] hover:text-[#ff6562]"
         >
           <FaArrowLeft /> Back to Toys
         </Link>
-        <figure className="">
-          <img
-            src={pictureURL}
-            alt={toyName}
-            className=" object-contain rounded-xl "
-          />
-        </figure>
-
-        <div className="card-body ">
-          <h2
-            className="card-title lg:text-3xl text-xl  flex
-           md:flex-row flex-col text-primary text-nowrap  font-semibold md:font-bold"
-          >
-            {toyName}
-            {inStock && (
-              <div className="badge bg-linear-to-r from-[#e568da] to-[#e69d95]    text-nowrap text-white border-none ml-2">
-                Available
-              </div>
-            )}
-          </h2>
-
-          <p className="text-gray-600 leading-relaxed">{description}</p>
-
-          <div className="divider my-2"></div>
-
-          <div className="space-y-2 text-gray-700">
-            <p>
-              <span className="font-semibold text-primary">Seller:</span>{" "}
-              {sellerName}
-            </p>
-            <p>
-              <span className="font-semibold text-primary">Email:</span>{" "}
-              {sellerEmail}
-            </p>
-            <p>
-              <span className="font-semibold text-primary"> Brand : </span>{" "}
-              {brandName}
-            </p>
-            <p>
-              <span className="font-semibold text-primary">Category:</span>{" "}
-              {category} / {subCategory}
-            </p>
-            <p>
-              <span className="font-semibold text-primary">Type:</span>{" "}
-              {isPopular ? "Best Seller" : "Great Choice"}
-            </p>
-
-            <p>
-              <span className="font-semibold text-primary">
-                Available Quantity:
-              </span>{" "}
-              {availableQuantity}
-            </p>
-            <div className="flex items-center  ">
-              <span className="text-primary font-semibold"> Rating: </span>
-              <FaStar className=" text-yellow-500" />{" "}
-              <span className="ml-1 text-gray-700">{rating}</span>
-            </div>
+        <div className="flex flex-col md:flex-row gap-10 bg-white  p-6 md:p-10  ">
+          {/* IMAGE */}
+          <div className="md:w-1/2 flex justify-center">
+            <figure className="w-full flex justify-center">
+              <img
+                src={pictureURL}
+                alt={toyName}
+                className="rounded-2xl w-full max-w-xl shadow-md object-cover border border-[#f3dada]"
+              />
+            </figure>
           </div>
 
-          <div className="flex items-center gap-4 mt-3">
-            <span className="text-2xl font-bold text-primary">
-              Price: ${price}
-            </span>
+          {/* INFO */}
+          <div className="md:w-1/2 flex flex-col gap-4">
+            {/* TITLE */}
+            <h2
+              className="card-title text-xl md:text-4xl
+             font-extrabold text-[#dc7977] flex flex-wrap items-center gap-3"
+            >
+              {toyName}
+              {inStock && (
+                <span className="badge bg-linear-to-r from-[#dc7977] to-[#ff6562] text-white border-none flex items-center gap-1">
+                  <FaCheckCircle /> In Stock
+                </span>
+              )}
+              {isPopular && (
+                <span className="badge bg-yellow-500 text-white border-none flex items-center gap-1">
+                  <FaFireAlt /> Best Seller
+                </span>
+              )}
+            </h2>
+
+            {/* PRICE */}
+            <div className="flex flex-wrap text-[#dc7977] items-center gap-3 text-lg md:text-2xl font-semibold">
+              Price:
+              {discount > 0 && (
+                <span className="text-red-500 line-through">${price}</span>
+              )}
+              <span className="text-[#dc7977]">${finalPrice}</span>
+              {discount > 0 && (
+                <span className="md:badge badge-sm bg-[#ff6562] text-white flex items-center gap-1 px-3 py-1 rounded-xl shadow">
+                  <FaTags /> {discount}% OFF
+                </span>
+              )}
+            </div>
+
+            {/* RATING */}
+            <p className="flex items-center gap-2 text-lg">
+              <FaStar className="text-yellow-500" />
+              <FaStar className="text-yellow-500" />
+              <FaStar className="text-yellow-500" />
+              <FaStar className="text-yellow-500" />
+              <span>({rating})</span>
+            </p>
+            <div className="flex gap-4">
+              <Detail
+                className="flex flex-col "
+                label="Brand"
+                value={brandName}
+              />
+
+              <Detail
+                className="flex flex-col"
+                label="Dimensions"
+                value={dimensions}
+              />
+            </div>
+            <Detail label="Category" value={`${category} / ${subCategory}`} />
+          </div>
+        </div>
+
+        {/* MAIN INFO */}
+        <div className="card-body space-y-4">
+          <p className="text-gray-700">{description}</p>
+
+          {/* DETAILS GRID */}
+          <div className="md:grid md:grid-cols-2 flex flex-col  gap-4 text-gray-700 mt-4">
+            <Detail label="Age Group" value={ageGroup} />
+            <Detail label="Age Range" value={ageRange} />
+            <Detail label="Theme" value={theme} />
+            <Detail label="Difficulty" value={difficultyLevel} />
+
+            <Detail label="Weight" value={weight} />
+            <Detail label="Material" value={material} />
+            <Detail label="Stock Status" value={stockStatus} />
+            {restockDate && <Detail label="Restock Date" value={restockDate} />}
+
+            <Detail label="Available Quantity" value={availableQuantity} />
+            <Detail
+              label="Learning Benefits"
+              value={learningBenefits?.join(", ")}
+            />
+            <Detail label="Colors" value={colorVariant?.join(", ")} />
+            <Detail label="Items Included" value={itemsIncluded?.join(", ")} />
+            <Detail label="Safety Warning" value={safetyWarnings} />
+
+            {/* SELLER INFO */}
+            <div className="col-span-2 p-4 rounded-xl mt-5  shadow-sm bg-gray-50">
+              <h3 className="font-bold text-[#dc7977] mb-2 flex items-center gap-1">
+                Seller Information{" "}
+                {shopVerified && <FaCheckCircle className="text-green-500" />}
+              </h3>
+              <p>
+                <span className="font-semibold">Name:</span> {sellerName}
+              </p>
+              <p>
+                <span className="font-semibold">Email:</span> {sellerEmail}
+              </p>
+              <p className="flex items-center gap-2">
+                <FaPhone /> {sellerPhone}
+              </p>
+              <p className="flex items-center gap-2">
+                <FaMapMarkerAlt /> {sellerAddress}
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row justify-around">
-        <div className=" mt-10 lg:max-w-96 bg-white  p-4 rounded-2xl shadow-2xl ">
-          <div className="">
-            <form onSubmit={handleSubmit}>
-              <h1 className="text-2xl text-primary font-bold text-center py-2">
-                Try this toy{" "}
-              </h1>
-              <legend>
-                <label className="text-lg font-semibold">Your Name:</label>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your name"
-                  className="input input-ghost border w-full border-gray-400 placeholder:text-gray-400"
-                  required
-                />
-              </legend>
-              <br />
-              <legend>
-                <label className="text-lg font-semibold">Your Email:</label>{" "}
-                <input
-                  type="text"
-                  name="email"
-                  placeholder="example@gmail.com"
-                  className="input input-ghost border w-full border-gray-400 placeholder:text-gray-400"
-                  required
-                />
-              </legend>
-              <br />
-              <button type="submit" className="btn gradient  w-full ">
-                Try now{" "}
-              </button>
-            </form>
-          </div>
+
+      {/* BOTTOM SECTIONS */}
+      <div className="flex flex-col lg:flex-row gap-8 mt-10">
+        {/* TRY FORM */}
+        <div className="p-6 rounded-2xl shadow-2xl bg-white lg:w-1/2">
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <h1 className="text-2xl font-bold text-center text-[#dc7977]">
+              Try This Toy
+            </h1>
+
+            <Input label="Your Name" name="name" />
+            <Input label="Your Email" name="email" />
+
+            <button
+              type="submit"
+              className="btn bg-gradient-to-r from-[#dc7977] to-[#ff6562] text-white w-full"
+            >
+              Try Now
+            </button>
+          </form>
         </div>
-        <div
-          className="flex flex-col justify-center 
-        items-center bg-white mt-10 p-4 rounded-2xl shadow-2xl"
-        >
-          <h1 className=" py-3 text-3xl font-bold text-center text-blue-800">
-            leave feedback &#8594;
+
+        {/* FEEDBACK */}
+        <div className="p-6 rounded-2xl shadow-2xl bg-white flex flex-col items-center lg:w-1/2">
+          <h1 className="text-3xl font-bold text-[#dc7977] mb-4">
+            Leave Feedback →
           </h1>
-          <Rating></Rating>
+          <Rating />
         </div>
       </div>
     </MyContainer>
   );
 };
+
+/* REUSABLE SMALL COMPONENTS */
+const Detail = ({ label, value, className }) => (
+  <p>
+    <span className={`font-semibold text-[#dc7977] ${className}`}>
+      {label}:
+    </span>{" "}
+    {value}
+  </p>
+);
+
+const Input = ({ label, name }) => (
+  <div>
+    <label className="font-semibold">{label}:</label>
+    <input
+      type="text"
+      name={name}
+      required
+      className="input input-bordered w-full mt-1 border-gray-400"
+    />
+  </div>
+);
 
 export default ToysDetails;

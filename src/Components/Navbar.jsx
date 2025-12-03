@@ -31,10 +31,10 @@ const Navbar = () => {
   );
   return (
     <>
-      <div className={`bg-[#f3efef] shadow-sm sticky top-0 z-50`}>
+      <div className={`bg-[#fadbd7] shadow-sm sticky top-0 z-50`}>
         <MyContainer className="navbar">
           <div className="navbar-start">
-            <div className="lg:h-22 md:h-15 h-10">
+            <div className="lg:h-18 md:h-14 h-10">
               <Link to={"/"}>
                 <img
                   className="w-full h-full object-contain"

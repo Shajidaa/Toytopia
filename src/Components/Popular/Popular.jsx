@@ -3,6 +3,10 @@ import useToys from "../../Hooks/Hook";
 import MyContainer from "../../MyContainer/MyContainer";
 import Spinner from "../Spinner/Spinner";
 import { FaStar } from "react-icons/fa";
+import {
+  MdDoubleArrow,
+  MdOutlineKeyboardDoubleArrowRight,
+} from "react-icons/md";
 
 const Popular = () => {
   const { toys, loading } = useToys();
@@ -25,7 +29,7 @@ const Popular = () => {
         </Link>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
         {popularToys.map((toy) => (
           <div
             key={toy.toyId}
@@ -46,20 +50,13 @@ const Popular = () => {
               {toy.toyName}
             </h2>
             <p className="font-semibold text-[#555555] ">Price:${toy.price}</p>
-            <div className="flex justify-between">
-              <p className="text-gray-600 font-medium">
-                Available: {toy.availableQuantity}
-              </p>
-              <p className="text-gray-600 font-medium">
-                <FaStar className="inline text-amber-500" /> {toy.rating}
-              </p>
-            </div>
 
             <Link
               to={`/toyDetails/${toy.toyId}`}
               className="mt-2 btn gradient "
             >
-              View More
+              View More{" "}
+              <MdOutlineKeyboardDoubleArrowRight className="text-2xl" />
             </Link>
           </div>
         ))}

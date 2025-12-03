@@ -3,6 +3,7 @@ import useToys from "../Hooks/Hook";
 import MyContainer from "../MyContainer/MyContainer";
 import Spinner from "../Components/Spinner/Spinner";
 import { FaStar } from "react-icons/fa";
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
 const Toys = () => {
   const { toys, loading } = useToys();
@@ -19,7 +20,7 @@ const Toys = () => {
       <p className="text-center text-base text-[#555555]">
         Explore our wide collection of fun and creative toys from local sellers!
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-5 md:my-15 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 my-5 md:my-15 ">
         {toys.map((toy) => (
           <div
             key={toy.toyId}
@@ -49,21 +50,22 @@ const Toys = () => {
               {toy.toyName}
             </h2>
             <p className="font-semibold text-[#555555] ">Price:${toy.price}</p>
-            <div className="flex justify-between">
+            {/* <div className="flex justify-between">
               <p className="text-gray-600 font-medium">
                 Available: {toy.availableQuantity}
               </p>
               <p className="text-gray-600 font-medium">
                 <FaStar className="inline text-amber-500" /> {toy.rating}
               </p>
-            </div>
+            </div> */}
 
             <Link
               to={`/toyDetails/${toy.toyId}`}
               className="mt-2 btn gradient
              "
             >
-              View More
+              View More{" "}
+              <MdOutlineKeyboardDoubleArrowRight className="text-2xl" />
             </Link>
           </div>
         ))}
