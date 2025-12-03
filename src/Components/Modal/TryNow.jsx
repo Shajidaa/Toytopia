@@ -12,7 +12,7 @@ const TryNow = () => {
 
   return (
     <div>
-      <div className="p-6 rounded-2xl shadow-2xl bg-white lg:w-1/2">
+      <div className="p-6 rounded-2xl shadow-2xl bg-white ">
         <form onSubmit={handleSubmit} className="space-y-4">
           <h1 className="text-2xl font-bold text-center text-[#dc7977]">
             Try This Toy

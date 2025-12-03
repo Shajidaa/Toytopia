@@ -2,11 +2,8 @@ import { Link } from "react-router";
 import useToys from "../../Hooks/Hook";
 import MyContainer from "../../MyContainer/MyContainer";
 import Spinner from "../Spinner/Spinner";
-import { FaStar } from "react-icons/fa";
-import {
-  MdDoubleArrow,
-  MdOutlineKeyboardDoubleArrowRight,
-} from "react-icons/md";
+
+import Card from "../Card";
 
 const Popular = () => {
   const { toys, loading } = useToys();
@@ -31,34 +28,7 @@ const Popular = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
         {popularToys.map((toy) => (
-          <div
-            key={toy.toyId}
-            className=" bg-white
-          rounded-2xl shadow-xl p-4
-           flex flex-col gap-2
-             hover:shadow-lg
-             hover:-translate-y-1 transition "
-          >
-            <div className=" flex justify-center items-center ">
-              <img
-                className="w-[295px] h-[198px] rounded-xl  object-contain"
-                src={toy.pictureURL}
-                alt={toy.toyName}
-              />
-            </div>
-            <h2 className="md:text-lg text-base font-bold pt-2 ">
-              {toy.toyName}
-            </h2>
-            <p className="font-semibold text-[#555555] ">Price:${toy.price}</p>
-
-            <Link
-              to={`/toyDetails/${toy.toyId}`}
-              className="mt-2 btn gradient "
-            >
-              View More{" "}
-              <MdOutlineKeyboardDoubleArrowRight className="text-2xl" />
-            </Link>
-          </div>
+          <Card toy={toy} key={toy.id}></Card>
         ))}
       </div>
     </MyContainer>

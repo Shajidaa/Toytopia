@@ -234,12 +234,12 @@ const ToysDetails = () => {
       </div>
 
       {/* BOTTOM SECTIONS */}
-      <div className="flex *:w-1/2 flex-col lg:flex-row gap-8 mt-10">
+      <div className="flex md:*:w-1/2 flex-col md:flex-row gap-8 mt-10">
         {/* TRY FORM */}
         <TryNow></TryNow>
 
         {/* FEEDBACK */}
-        <div className="p-6 rounded-2xl shadow-2xl bg-white flex flex-col items-center lg:w-1/2">
+        <div className="p-6 rounded-2xl shadow-2xl bg-white flex flex-col items-center ">
           <h1 className="text-3xl font-bold text-[#dc7977] mb-4">
             Leave Feedback →
           </h1>
