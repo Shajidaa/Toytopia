@@ -50,9 +50,6 @@ const Navbar = () => {
       </NavLink>
       {user && (
         <>
-          <NavLink to={"/profile"} className={"navLink"}>
-            PROFILE
-          </NavLink>
           <NavLink to={"/offers"} className={"navLink"}>
             OFFERS
           </NavLink>
@@ -84,7 +81,8 @@ const Navbar = () => {
             {user ? (
               <div className="flex justify-center items-center gap-2">
                 {" "}
-                <div
+                <Link
+                  to={"/profile"}
                   data-tip={user.displayName}
                   className="md:size-12 size-8 tooltip tooltip-error tooltip-bottom border-2 border-[#dc7977] rounded-full "
                 >
@@ -93,7 +91,7 @@ const Navbar = () => {
                     src={user.photoURL}
                     alt="User Profile"
                   />
-                </div>
+                </Link>
                 <Link
                   onClick={handleLogOut}
                   to={"login"}
@@ -137,24 +135,24 @@ const Navbar = () => {
       {/* MOBILE SIDEBAR DRAWER */}
       <div
         id="mobile-sidebar"
-        className={`fixed top-0 left-0 w-56 h-full bg-white text-[#dc7977] transform 
-  ${openSidebar ? "translate-x-0" : "-translate-x-full"}
-  transition-transform duration-300 z-[9999]  md:hidden`}
+        className={`fixed   top-0 left-0 w-36 h-full bg-white text-[#dc7977] transform 
+  ${openSidebar ? "translate-x-0  " : "-translate-x-full"}
+  transition-transform duration-300 z-[9999]   md:hidden`}
       >
         <div className="p-4">
-          <h1 className="text-xl font-semibold mb-4">Menu</h1>
+          <h1 className="text-xl ml-2.5 font-semibold mb-4">Menu</h1>
           <ul className="flex flex-col gap-3">{links}</ul>
 
           <div className="mt-5">
             {user ? (
               <button
                 onClick={handleLogOut}
-                className="btn w-full btn-sm gradient"
+                className="btn w-full btn-sm! gradient"
               >
                 Log Out
               </button>
             ) : (
-              <Link to="/login" className="btn w-full btn-sm gradient">
+              <Link to="/login" className="btn w-full btn-sm! gradient">
                 Login
               </Link>
             )}

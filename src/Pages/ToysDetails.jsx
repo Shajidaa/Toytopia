@@ -17,6 +17,7 @@ import MyContainer from "../MyContainer/MyContainer";
 import Detail from "../Components/Detail";
 import Input from "../Components/Input";
 import { useState } from "react";
+import TryNow from "../Components/Modal/TryNow";
 
 const ToysDetails = () => {
   const { id } = useParams();
@@ -71,13 +72,6 @@ const ToysDetails = () => {
   const finalPrice = discount
     ? (price - (price * discount) / 100).toFixed(2)
     : price;
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const name = e.target.name.value.trim();
-    e.target.reset();
-    return toast.success(`Thanks ${name}, Received your request! 🎉`);
-  };
 
   return (
     <MyContainer className="p-6">
@@ -240,25 +234,9 @@ const ToysDetails = () => {
       </div>
 
       {/* BOTTOM SECTIONS */}
-      <div className="flex flex-col lg:flex-row gap-8 mt-10">
+      <div className="flex *:w-1/2 flex-col lg:flex-row gap-8 mt-10">
         {/* TRY FORM */}
-        <div className="p-6 rounded-2xl shadow-2xl bg-white lg:w-1/2">
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <h1 className="text-2xl font-bold text-center text-[#dc7977]">
-              Try This Toy
-            </h1>
-
-            <Input label="Your Name" name="name" />
-            <Input label="Your Email" name="email" />
-
-            <button
-              type="submit"
-              className="btn bg-gradient-to-r from-[#dc7977] to-[#ff6562] text-white w-full"
-            >
-              Try Now
-            </button>
-          </form>
-        </div>
+        <TryNow></TryNow>
 
         {/* FEEDBACK */}
         <div className="p-6 rounded-2xl shadow-2xl bg-white flex flex-col items-center lg:w-1/2">
