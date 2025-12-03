@@ -1,19 +1,14 @@
-const Detail = ({ label, value }) => (
-  <p>
-    <span className="font-semibold text-[#dc7977]">{label}:</span> {value}
-  </p>
-);
+import React from "react";
 
-const Input = ({ label, name }) => (
-  <div>
-    <label className="font-semibold">{label}:</label>
-    <input
-      type="text"
-      name={name}
-      required
-      className="input input-bordered w-full mt-1 border-gray-400"
-    />
-  </div>
-);
+const Detail = ({ label, value, className }) => {
+  return (
+    <p>
+      <span className={`font-semibold text-[#dc7977] ${className}`}>
+        {label}:
+      </span>{" "}
+      {value}
+    </p>
+  );
+};
 
-export { Detail, Input };
+export default Detail;

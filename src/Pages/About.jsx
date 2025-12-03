@@ -18,7 +18,7 @@ export default function About() {
       </div>
 
       {/* About Section */}
-      <div className="bg-white/20 backdrop-blur-md p-10 rounded-3xl shadow-xl  mx-auto">
+      <div className="bg-white backdrop-blur-md p-10 rounded-3xl shadow-xl  mx-auto">
         <p className="text-lg leading-relaxed">
           At <span className="font-semibold">Toytopia</span>, we believe every
           child deserves a world filled with joy, creativity, and endless
@@ -53,7 +53,7 @@ export default function About() {
         ].map((item, index) => (
           <div
             key={index}
-            className="bg-white/20 backdrop-blur-lg p-8 rounded-3xl text-center shadow-xl hover:scale-105 transition-transform"
+            className="bg-white backdrop-blur-lg p-8 rounded-3xl text-center shadow-xl hover:scale-105 transition-transform"
           >
             <div className="flex justify-center mb-4">{item.icon}</div>
             <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
@@ -62,7 +62,7 @@ export default function About() {
         ))}
       </div>
       {/* Mission Section */}
-      <div className="mt-16 bg-white/20 backdrop-blur-md p-10 rounded-3xl shadow-xl mx-auto">
+      <div className="mt-16 bg-white backdrop-blur-md p-10 rounded-3xl shadow-xl mx-auto">
         <h2 className="text-2xl font-bold  mb-4 text-center">Our Mission</h2>
         <p className="text-lg leading-relaxed text-center">
           Our mission is to build a joyful and imaginative world for kids by

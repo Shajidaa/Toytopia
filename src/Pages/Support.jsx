@@ -12,7 +12,9 @@ const Support = () => {
     <MyContainer className="min-h-screen p-10 text-[#dc7977]">
       {/* Header */}
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold">Support</h1>
+        <h1 className="text-3xl text-[#333333] text-center font-bold mb-2 md:mb-4">
+          Support
+        </h1>
         <p className="text-lg mt-2 max-w-xl mx-auto">
           We're here to help! If you have any questions, concerns, or need
           assistance, feel free to reach out to us anytime.
@@ -20,20 +22,20 @@ const Support = () => {
       </div>
 
       {/* Contact Options */}
-      <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        <div className="bg-white/20 backdrop-blur-md p-8 rounded-3xl shadow-xl text-center">
+      <div className="grid md:grid-cols-3 gap-8  mx-auto">
+        <div className="bg-white backdrop-blur-md p-8 rounded-3xl shadow-xl text-center">
           <FaEnvelope size={50} className="mx-auto mb-4" />
           <h3 className="text-2xl font-bold mb-2">Email Us</h3>
           <p>support@toytopia.com</p>
         </div>
 
-        <div className="bg-white/20 backdrop-blur-md p-8 rounded-3xl shadow-xl text-center">
+        <div className="bg-white backdrop-blur-md p-8 rounded-3xl shadow-xl text-center">
           <FaPhone size={50} className="mx-auto mb-4" />
           <h3 className="text-2xl font-bold mb-2">Call Us</h3>
           <p>+1 800 555 1234</p>
         </div>
 
-        <div className="bg-white/20 backdrop-blur-md p-8 rounded-3xl shadow-xl text-center">
+        <div className="bg-white backdrop-blur-md p-8 rounded-3xl shadow-xl text-center">
           <FaHeadset size={50} className="mx-auto mb-4" />
           <h3 className="text-2xl font-bold mb-2">Live Support</h3>
           <p>Chat with our team for instant help.</p>
@@ -42,7 +44,7 @@ const Support = () => {
 
       {/* FAQ Section */}
       <div className="mt-16 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-6">
+        <h2 className="text-3xl font-bold text-[#333333]  text-center mb-6">
           Frequently Asked Questions
         </h2>
         <div className="space-y-6">
@@ -62,7 +64,7 @@ const Support = () => {
           ].map((item, i) => (
             <div
               key={i}
-              className="bg-white/20 backdrop-blur-md p-6 rounded-2xl shadow-lg"
+              className="bg-white backdrop-blur-md p-6 rounded-2xl shadow-lg"
             >
               <div className="flex items-center gap-3 text-xl font-semibold mb-2">
                 <FaQuestionCircle /> {item.q}

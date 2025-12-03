@@ -1,18 +1,39 @@
 import { Link, NavLink, useNavigate } from "react-router";
 import MyContainer from "../MyContainer/MyContainer";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthContext";
 import { TbUser } from "react-icons/tb";
 import { toast } from "react-toastify";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [openSidebar, setOpenSidebar] = useState(false);
   const navigate = useNavigate();
   const handleLogOut = () => {
     logOut();
     navigate("/");
     toast.success("Logout successfully!");
   };
+
+  const toggleSidebar = (e) => {
+    e.stopPropagation();
+    setOpenSidebar(!openSidebar);
+  };
+
+  // Close sidebar when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        !e.target.closest("#mobile-sidebar") &&
+        !e.target.closest("#hamburger-btn")
+      ) {
+        setOpenSidebar(false);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
+
   const links = (
     <>
       <NavLink to={"/"} className={"navLink"}>
@@ -25,7 +46,7 @@ const Navbar = () => {
         ABOUT
       </NavLink>
       <NavLink to={"/support"} className="navLink">
-        ABOUT
+        SUPPORT
       </NavLink>
       {user && (
         <>
@@ -76,7 +97,7 @@ const Navbar = () => {
                 <Link
                   onClick={handleLogOut}
                   to={"login"}
-                  className="btn  btn-sm md:btn-md gradient"
+                  className="btn  hidden md:inline btn-sm md:btn-md gradient"
                 >
                   Log Out
                 </Link>
@@ -89,13 +110,55 @@ const Navbar = () => {
                 </Link>
               </div>
             )}
+            {/* ADD THIS ONLY FOR MOBILE */}
+            <button
+              id="hamburger-btn"
+              onClick={toggleSidebar}
+              className="md:hidden  mr-3"
+            >
+              <svg
+                className="w-7 h-7 text-gray-700"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
           </div>
         </MyContainer>
       </div>
 
-      <div className="shadow-sm bg-base-100/30 backdrop-blur-md md:hidden fixed bottom-0 left-0 w-full z-50">
-        <div className=" flex justify-center items-center">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
+      {/* MOBILE SIDEBAR DRAWER */}
+      <div
+        id="mobile-sidebar"
+        className={`fixed top-0 left-0 w-56 h-full bg-white text-[#dc7977] transform 
+  ${openSidebar ? "translate-x-0" : "-translate-x-full"}
+  transition-transform duration-300 z-[9999]  md:hidden`}
+      >
+        <div className="p-4">
+          <h1 className="text-xl font-semibold mb-4">Menu</h1>
+          <ul className="flex flex-col gap-3">{links}</ul>
+
+          <div className="mt-5">
+            {user ? (
+              <button
+                onClick={handleLogOut}
+                className="btn w-full btn-sm gradient"
+              >
+                Log Out
+              </button>
+            ) : (
+              <Link to="/login" className="btn w-full btn-sm gradient">
+                Login
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </>

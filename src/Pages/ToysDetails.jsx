@@ -14,10 +14,14 @@ import { toast } from "react-toastify";
 import Rating from "../Components/Rating";
 import Spinner from "../Components/Spinner/Spinner";
 import MyContainer from "../MyContainer/MyContainer";
+import Detail from "../Components/Detail";
+import Input from "../Components/Input";
+import { useState } from "react";
 
 const ToysDetails = () => {
   const { id } = useParams();
   const { toys, loading } = useToys();
+  const [qty, setQty] = useState(1);
   const singleToys = toys.find((toy) => toy.toyId == id);
 
   if (loading) return <Spinner />;
@@ -58,6 +62,12 @@ const ToysDetails = () => {
     restockDate,
   } = singleToys;
 
+  const increaseQty = () => setQty((q) => q + 1);
+  const decreaseQty = () => setQty((q) => (q > 1 ? q - 1 : 1));
+
+  const handleAddToCart = () => {
+    toast.success(`${qty} item(s) added to cart! 🛒`);
+  };
   const finalPrice = discount
     ? (price - (price * discount) / 100).toFixed(2)
     : price;
@@ -149,6 +159,35 @@ const ToysDetails = () => {
               />
             </div>
             <Detail label="Category" value={`${category} / ${subCategory}`} />
+            {/* ADD TO CART SECTION */}
+            <div className="mt-6 flex md:flex-row flex-col items-center gap-5">
+              {/* Quantity Selector */}
+              <div className="flex items-center border rounded-xl overflow-hidden shadow">
+                <button
+                  onClick={decreaseQty}
+                  className="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-xl font-bold"
+                >
+                  -
+                </button>
+
+                <span className="px-6 py-2 text-lg font-semibold">{qty}</span>
+
+                <button
+                  onClick={increaseQty}
+                  className="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-xl font-bold"
+                >
+                  +
+                </button>
+              </div>
+
+              {/* ADD TO CART BUTTON */}
+              <button
+                onClick={handleAddToCart}
+                className="btn bg-linear-to-r from-[#dc7977] to-[#ff6562] text-white px-6 py-3 rounded-xl shadow-lg hover:opacity-90"
+              >
+                Add to Cart 🛒
+              </button>
+            </div>
           </div>
         </div>
 
@@ -232,27 +271,5 @@ const ToysDetails = () => {
     </MyContainer>
   );
 };
-
-/* REUSABLE SMALL COMPONENTS */
-const Detail = ({ label, value, className }) => (
-  <p>
-    <span className={`font-semibold text-[#dc7977] ${className}`}>
-      {label}:
-    </span>{" "}
-    {value}
-  </p>
-);
-
-const Input = ({ label, name }) => (
-  <div>
-    <label className="font-semibold">{label}:</label>
-    <input
-      type="text"
-      name={name}
-      required
-      className="input input-bordered w-full mt-1 border-gray-400"
-    />
-  </div>
-);
 
 export default ToysDetails;
