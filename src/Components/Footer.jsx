@@ -2,17 +2,22 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import MyContainer from "../MyContainer/MyContainer";
-
+import logo from "../../public/logo.png";
 const Footer = () => {
   return (
-    <footer className="px-4  w-full gradientBg">
+    <footer className="  w-full gradientBg">
       <MyContainer
         className="container flex
        flex-col justify-between py-10 mx-auto space-y-8 
        lg:flex-row lg:space-y-0"
       >
         <div className="lg:w-1/4">
-          <h1 className="self-center text-2xl font-semibold">ToyTopia</h1>
+          <div className="flex flex-row">
+            <div className="size-12">
+              <img src={logo} alt="" />
+            </div>
+            <h1 className="self-center text-2xl font-semibold"> ToyTopia</h1>
+          </div>
 
           <p className="text-sm text-[#333333] mt-3.5">
             Bringing joy and imagination to kids with fun, safe, and creative
@@ -114,8 +119,8 @@ const Footer = () => {
         <hr />
       </MyContainer>
       <hr className="hidden lg:flex" />
-      <div className="md:py-3 py-0 md:pb-2 pb-15 text-sm text-center ">
-        © All rights reserved by ToyTopia
+      <div className="md:py-3 py-0 pb-2  text-sm text-center ">
+        <i className="">© All rights reserved by ToyTopia</i>
       </div>
     </footer>
   );
